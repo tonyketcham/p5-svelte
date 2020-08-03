@@ -21,7 +21,7 @@
     "dist"
   ],
   "description": "*Psst — looking for a p5-svelte app template? Go here --> [tonyketcham/p5-svelte-template](https://github.com/tonyketcham/p5-svelte-template)*",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tonyketcham/p5-svelte.git"
