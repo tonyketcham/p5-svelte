@@ -1,0 +1,35 @@
+{
+  "name": "p5-svelte",
+  "svelte": "src/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^6.0.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-svelte": "^5.0.0",
+    "svelte": "^3.0.0"
+  },
+  "keywords": [
+    "svelte"
+  ],
+  "files": [
+    "src",
+    "dist"
+  ],
+  "description": "*Psst — looking for a p5-svelte app template? Go here --> [tonyketcham/p5-svelte-template](https://github.com/tonyketcham/p5-svelte-template)*",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyketcham/p5-svelte.git"
+  },
+  "author": "Tony Ketcham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonyketcham/p5-svelte/issues"
+  },
+  "homepage": "https://github.com/tonyketcham/p5-svelte#readme"
+}
