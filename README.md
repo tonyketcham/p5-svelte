@@ -1,3 +1,5 @@
+![CodeQL](https://github.com/tonyketcham/p5-svelte/workflows/CodeQL/badge.svg)
+
 *Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*
 
 ---
