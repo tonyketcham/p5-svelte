@@ -1,5 +1,6 @@
 <script>
-  import sketch from './sketch';
+  import _p5 from './action';
+  export let sketch = null;
 </script>
 
-<canvas use:sketch />
+<figure use:_p5={sketch} />
