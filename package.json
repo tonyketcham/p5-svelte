@@ -24,7 +24,7 @@
     "dist"
   ],
   "description": "A p5 component to seamlessly toss into existing Svelte projects",
-  "version": "1.0.1-1",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tonyketcham/p5-svelte.git"
