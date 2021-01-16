@@ -1,5 +1,8 @@
 ![CodeQL](https://github.com/tonyketcham/p5-svelte/workflows/CodeQL/badge.svg)
-# p5-Svelte 🧙‍♂️🕸
+<h1 align="center">🧙‍♂️ p5-Svelte 🕸</h1>
+<p align="center">
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--5L4QI4B_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/ozuet5qpew6t9rup6o4p.gif" alt="10print made using p5-svelte" width="250" height="250" />
+</p>
 
 Trying to get [p5](https://p5js.org/) up and running in [Svelte](https://svelte.dev/) can be a pain. So here's an absolutely dead simple way of tossing it into your project.
 
