@@ -9,7 +9,7 @@
 
 Trying to get <a href="https://p5js.org/">p5</a> up and running in [Svelte](https://svelte.dev/) can be a pain. So here's an absolutely dead simple way of tossing it into your project.
 
-The API is super simple; you get a <code>P5</code> component which accepts a <code>sketch</code> prop. You can even have multiple p5 components per page without any scoping issues!
+The API is super simple; you get a <code>P5</code> component which accepts a <code>sketch</code> prop. You can make use of Svelte's reactivity system to bind props or params within your p5 sketch just as you would with regular Svelte! You can even have multiple p5 components per page without any scoping issues!
 </p>
 </div>
 
@@ -20,46 +20,43 @@ Install:
 yarn add p5 p5-svelte
 ```
 Add to your project (ex. `src/App.svelte`):
+<div>
+  <div align="right">
+    <img align="right" src="https://dev-to-uploads.s3.amazonaws.com/i/ajyz894enhdgdvot441x.gif" alt="using Svelte's reactivity system to bind parameters to a p5 sketch" width="265" height="265" />
+  </div>
+
 ```svelte
 <script>
   import P5 from 'p5-svelte';
+  let width = 55;
+  let height = 55;
 
-  /**
-  * This example implements the 10print algorithm
-  * @see {@link https://10print.org/} to learn about it!
-  * @param {p5} p5 instance mode
-  */
   const sketch = (p5) => {
-    let x = 0;
-    let y = 0;
-    let size = 15;
-    let threshold = 0;
-
     p5.setup = () => {
       p5.createCanvas(400, 400);
     };
 
     p5.draw = () => {
-      p5.stroke(1);
-      threshold = p5.random(0.75);
-
-      if (threshold < 0.1) p5.line(x, y, x + size, y + size);
-      else if (0.505 > threshold > 0.5) p5.line(x, y, x, y + size);
-      else p5.line(x, y + size, x + size, y);
-
-      x = x + size;
-      if (x > p5.width) {
-        x = 0;
-        y = y + size;
-      }
+      p5.ellipse(p5.width / 2, p5.height / 2, width, height);
     };
   };
 </script>
 
+<label>
+  Width
+  <input type="range" bind:value={width} min="100" max="1000" step="0.01" />
+  {width}
+</label>
+
+<label>
+  Height
+  <input type="range" bind:value={height} min="100" max="1000" step="0.01" />
+  {height}
+</label>
+
 <P5 {sketch} />
-
 ```
-
+</div>
 It's that easy!
 
 ## p5.js instance mode
