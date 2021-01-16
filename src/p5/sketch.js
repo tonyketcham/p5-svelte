@@ -10,11 +10,11 @@ export default function sketch(node) {
  * @param {p5} p5 sketch instance, scoped where many may exist on the same page
  */
 const workspace = (p5) => {
-  let x = 100;
-  let y = 100;
+  let x = 400;
+  let y = 400;
 
   p5.setup = () => {
-    p5.createCanvas(400, 400);
+    p5.createCanvas(x, y);
   };
 
   p5.draw = () => {
