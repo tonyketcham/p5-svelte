@@ -1,12 +1,16 @@
 ![CodeQL](https://github.com/tonyketcham/p5-svelte/workflows/CodeQL/badge.svg)
 <h1 align="center">🧙‍♂️ p5-Svelte 🕸</h1>
-<p align="center">
-  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--5L4QI4B_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/ozuet5qpew6t9rup6o4p.gif" alt="10print made using p5-svelte" width="250" height="250" />
+<div>
+<p>
+  <img align="right" src="https://res.cloudinary.com/practicaldev/image/fetch/s--5L4QI4B_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/ozuet5qpew6t9rup6o4p.gif" alt="10print made using p5-svelte" width="265" height="265" />
+
+
+Trying to get <a href="https://p5js.org/">p5</a> up and running in [Svelte](https://svelte.dev/) can be a pain. So here's an absolutely dead simple way of tossing it into your project.
+
+The API is super simple; you get a <code>P5</code> component which accepts a <code>sketch</code> prop. You can even have multiple p5 components per page without any scoping issues!
 </p>
+</div>
 
-Trying to get [p5](https://p5js.org/) up and running in [Svelte](https://svelte.dev/) can be a pain. So here's an absolutely dead simple way of tossing it into your project.
-
-The API is super simple; you get a `<P5/>` component which accepts a `sketch` prop. You can even have multiple p5 components per page without any scoping issues!
 
 ## Usage
 Install:
