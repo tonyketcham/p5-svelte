@@ -8,7 +8,7 @@ The API is super simple; you get a `<P5/>` component which accepts a `sketch` pr
 ## Usage
 Install:
 ```ps 
-yarn add p5-svelte
+yarn add p5 p5-svelte
 ```
 Add to your project (ex. `src/App.svelte`):
 ```svelte
