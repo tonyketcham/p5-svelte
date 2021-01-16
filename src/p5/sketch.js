@@ -1,4 +1,4 @@
-import p5 from 'p5';
+import { p5 } from 'p5';
 
 export default function sketch(node) {
   new p5((instance) => workspace(instance), node);
