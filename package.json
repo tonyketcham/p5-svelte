@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^6.0.0",
+    "p5": "^1.1.9",
     "rollup": "^1.20.0",
     "rollup-plugin-svelte": "^5.0.0",
     "svelte": "^3.0.0"
@@ -20,7 +21,7 @@
     "src",
     "dist"
   ],
-  "description": "*Psst — looking for a p5-svelte app template? Go here --> [tonyketcham/p5-svelte-template](https://github.com/tonyketcham/p5-svelte-template)*",
+  "description": "A p5 component to seamlessly toss into existing Svelte projects",
   "version": "1.0.1-0",
   "repository": {
     "type": "git",
