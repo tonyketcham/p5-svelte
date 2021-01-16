@@ -1,6 +1,11 @@
 ![CodeQL](https://github.com/tonyketcham/p5-svelte/workflows/CodeQL/badge.svg)
+# p5-Svelte 🧙‍♂️🕸
 
-# Usage
+Trying to get [p5](https://p5js.org/) up and running in [Svelte](https://svelte.dev/) can be a pain. So here's an absolutely dead simple way of tossing it into your project.
+
+The API is super simple; you get a `<P5/>` component which accepts a `sketch` prop. You can even have multiple p5 components per page without any scoping issues!
+
+## Usage
 Install:
 ```ps 
 yarn add p5-svelte
@@ -10,6 +15,11 @@ Add to your project (ex. `src/App.svelte`):
 <script>
   import P5 from 'p5-svelte';
 
+  /**
+  * This example implements the 10print algorithm
+  * @see {@link https://10print.org/} to learn about it!
+  * @param {p5} p5 instance mode
+  */
   const sketch = (p5) => {
     let x = 0;
     let y = 0;
@@ -43,4 +53,5 @@ Add to your project (ex. `src/App.svelte`):
 
 It's that easy!
 
-*Note:* p5 must be used in instance mode since Svelte does not allow us to install to the `window`. That means you'll have to call library functions with a `p5.` preceeding them like in the example above.
+## p5.js instance mode
+Svelte doesn't allow us to globally expose the p5 library by installing it to the `window` (which is how p5 is commonly installed in vanilla js projects). Therefore, p5 must be used in instance mode with this component. That means you'll have to call library functions with a `p5.` preceeding them like in the example above.
