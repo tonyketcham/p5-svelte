@@ -17,19 +17,23 @@
     "svelte": "^3.0.0"
   },
   "keywords": [
-    "svelte"
+    "svelte",
+    "svelte-component",
+    "p5",
+    "processing",
+    "components"
   ],
   "files": [
     "src",
     "dist"
   ],
-  "description": "A p5 component to seamlessly toss into existing Svelte projects",
+  "description": "A component for easily using p5 sketches in Svelte. Allows passing Svelte props into a p5 sketch.",
   "version": "2.1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tonyketcham/p5-svelte.git"
   },
-  "author": "Tony Ketcham",
+  "author": "Tony Ketcham <ketcham.dev@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tonyketcham/p5-svelte/issues"
