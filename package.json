@@ -1,5 +1,7 @@
 {
   "name": "p5-svelte",
+  "description": "A component for easily using p5 sketches in Svelte. Allows passing Svelte props into a p5 sketch.",
+  "version": "2.2.0",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
@@ -13,11 +15,10 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "rollup": "^2.0.0",
     "rollup-plugin-svelte": "^6.0.0",
-    "svelte": "^3.0.0",
-    "p5": "^1.1.9"
+    "svelte": "^3.0.0"
   },
   "peerDependencies": {
-    "p5": "*"
+    "p5": "^1.1.9"
   },
   "keywords": [
     "svelte",
@@ -30,8 +31,6 @@
     "src",
     "dist"
   ],
-  "description": "A component for easily using p5 sketches in Svelte. Allows passing Svelte props into a p5 sketch.",
-  "version": "2.2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tonyketcham/p5-svelte.git"

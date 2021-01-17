@@ -11,7 +11,6 @@ const name = pkg.name
 export default {
   input: 'src/index.js',
   output: [
-    { globals: { p5: 'p5' } },
     { file: pkg.module, format: 'es' },
     { file: pkg.main, format: 'umd', name },
   ],
