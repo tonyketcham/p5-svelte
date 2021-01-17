@@ -19,7 +19,7 @@ The API is super simple; you get a <code>P5</code> component which accepts a <co
 ## Usage
 Install:
 ```ps 
-yarn add p5 p5-svelte
+yarn add p5-svelte
 ```
 Add to your project (ex. `src/App.svelte`):
 <div>
