@@ -11,10 +11,13 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
-    "p5": "^1.1.9",
     "rollup": "^2.0.0",
     "rollup-plugin-svelte": "^6.0.0",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "p5": "^1.1.9"
+  },
+  "peerDependencies": {
+    "p5": "*"
   },
   "keywords": [
     "svelte"
