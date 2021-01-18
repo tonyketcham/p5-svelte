@@ -28,7 +28,6 @@
     "components"
   ],
   "files": [
-    "src",
     "dist"
   ],
   "repository": {
