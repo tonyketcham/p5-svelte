@@ -11,9 +11,9 @@
     "test": "echo \"No test specified\""
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "rollup": "^2.0.0",
+    "rollup-plugin-includepaths": "^0.2.4",
     "rollup-plugin-svelte": "^6.0.0",
     "svelte": "^3.0.0"
   },
