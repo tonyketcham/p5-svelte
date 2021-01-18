@@ -1,7 +1,7 @@
 {
   "name": "p5-svelte",
   "description": "A component for easily using p5 sketches in Svelte. Allows passing Svelte props into a p5 sketch.",
-  "version": "2.2.1-3",
+  "version": "2.2.1",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
