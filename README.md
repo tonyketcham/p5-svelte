@@ -21,7 +21,11 @@ Install:
 ```ps 
 yarn add p5-svelte
 ```
-Add to your project (ex. `src/App.svelte`):
+Depending on your environment, you may be alerted upon installing `p5-svelte` that `p5` is a required peer dependency which you must install yourself. Thus do: 
+```ps
+yarn add p5 -D
+```
+Now add `p5-svelte` to your project (ex. `src/App.svelte`):
 <div>
   <div align="right">
     <img align="right" src="https://dev-to-uploads.s3.amazonaws.com/i/ajyz894enhdgdvot441x.gif" alt="using Svelte's reactivity system to bind parameters to a p5 sketch" width="265" height="265" />
@@ -59,6 +63,7 @@ Add to your project (ex. `src/App.svelte`):
 <P5 {sketch} />
 ```
 </div>
+
 It's that easy!
 
 ## p5.js instance mode
