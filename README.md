@@ -17,6 +17,7 @@ The API is super simple; you get a <code>P5</code> component which accepts a <co
 
 
 ## Usage
+### Svelte
 Install:
 ```ps 
 yarn add p5-svelte
@@ -65,6 +66,53 @@ Now add `p5-svelte` to your project (ex. `src/App.svelte`):
 </div>
 
 It's that easy!
+
+### Sapper
+Install:
+```ps 
+yarn add p5-svelte p5 -D
+```
+Now add `p5-svelte` to your project (ex. `src/App.svelte`):
+
+```svelte
+<script>
+import { onMount } from "svelte";
+
+let P5;
+
+onMount(async () => {
+  const module = await import("p5-svelte");
+  P5 = module.default;
+});
+
+let width = 55;
+let height = 55;
+
+const sketch = (p5) => {
+  p5.setup = () => {
+    p5.createCanvas(400, 400);
+  };
+
+  p5.draw = () => {
+    p5.ellipse(p5.width / 2, p5.height / 2, width, height);
+  };
+};
+</script>
+
+<label>
+  Width
+  <input type="range" bind:value={width} min="100" max="1000" step="0.01" />
+  {width}
+</label>
+
+<label>
+  Height
+  <input type="range" bind:value={height} min="100" max="1000" step="0.01" />
+  {height}
+</label>
+
+<svelte:component this={P5} {sketch} />
+```
 
 ## p5.js instance mode
 Svelte doesn't allow us to globally expose the p5 library by installing it to the `window` (which is how p5 is commonly installed in vanilla js projects). Therefore, p5 must be used in instance mode with this component. That means you'll have to call library functions with a `p5.` preceding them like in the example above.
