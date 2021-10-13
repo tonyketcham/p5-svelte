@@ -1,1 +1,1 @@
-export { default as default } from './p5/p5.svelte';
+export { default as default } from './P5.svelte';
