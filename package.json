@@ -14,7 +14,7 @@
     "@rollup/plugin-node-resolve": "^13.0.0",
     "rollup": "^2.0.0",
     "rollup-plugin-includepaths": "^0.2.4",
-    "rollup-plugin-svelte": "^6.0.0",
+    "rollup-plugin-svelte": "^7.1.0",
     "svelte": "^3.0.0"
   },
   "peerDependencies": {
