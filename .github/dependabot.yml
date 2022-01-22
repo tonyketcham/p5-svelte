@@ -1,16 +1,16 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "11:00"
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: rollup
-    versions:
-    - 2.41.3
-    - 2.42.0
-    - 2.42.2
-    - 2.43.1
-    - 2.45.1
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '11:00'
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: rollup
+        versions:
+          - 2.41.3
+          - 2.42.0
+          - 2.42.2
+          - 2.43.1
+          - 2.45.1
