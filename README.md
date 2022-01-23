@@ -1,5 +1,4 @@
-![CodeQL](https://github.com/tonyketcham/p5-svelte/workflows/CodeQL/badge.svg)
-![Node.js CI Build](https://github.com/tonyketcham/p5-svelte/workflows/Node.js%20CI/badge.svg)
+[![Build CI](https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml/badge.svg)](https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml)
 [![npm version](https://badge.fury.io/js/p5-svelte.svg)](https://badge.fury.io/js/p5-svelte)
 
 <h1 align="center">🧙‍♂️ p5-Svelte 🕸
