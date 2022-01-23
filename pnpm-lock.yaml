@@ -1,7 +1,6 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@sveltejs/adapter-auto': next
   '@sveltejs/adapter-static': ^1.0.0-next.26
   '@sveltejs/kit': next
   '@typescript-eslint/eslint-plugin': ^4.31.1
@@ -10,12 +9,14 @@ specifiers:
   eslint: ^7.32.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^3.2.1
+  highlight.js: ^11.4.0
   p5: ^1.4.0
   postcss: ^8.4.5
   prettier: ^2.4.1
   prettier-plugin-svelte: ^2.4.0
   svelte: ^3.44.0
   svelte-check: ^2.2.6
+  svelte-highlight: ^5.2.0
   svelte-preprocess: ^4.9.4
   svelte2tsx: ^0.4.14
   tailwindcss: ^3.0.15
@@ -26,7 +27,6 @@ dependencies:
   p5: 1.4.0
 
 devDependencies:
-  '@sveltejs/adapter-auto': 1.0.0-next.14
   '@sveltejs/adapter-static': 1.0.0-next.26
   '@sveltejs/kit': 1.0.0-next.240_svelte@3.46.2
   '@typescript-eslint/eslint-plugin': 4.33.0_959502c0ea240e86d4d2ba8b8c0fee45
@@ -35,11 +35,13 @@ devDependencies:
   eslint: 7.32.0
   eslint-config-prettier: 8.3.0_eslint@7.32.0
   eslint-plugin-svelte3: 3.4.0_eslint@7.32.0+svelte@3.46.2
+  highlight.js: 11.4.0
   postcss: 8.4.5
   prettier: 2.5.1
   prettier-plugin-svelte: 2.6.0_prettier@2.5.1+svelte@3.46.2
   svelte: 3.46.2
   svelte-check: 2.3.0_postcss@8.4.5+svelte@3.46.2
+  svelte-highlight: 5.2.0
   svelte-preprocess: 4.10.2_2a4c99a86e01910091fb98182b640d22
   svelte2tsx: 0.4.14_svelte@3.46.2+typescript@4.5.5
   tailwindcss: 3.0.15_ef48b3b8837f8a23677bffe8f9cd866d
@@ -107,10 +109,6 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iarna/toml/2.2.5:
-    resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
-    dev: true
-
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -140,38 +138,10 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-auto/1.0.0-next.14:
-    resolution: {integrity: sha512-W69ooD5G5uurEkrL3RDTr6cKnWm5pgVu4UUUHS456nn2P5Qmm+/mTK5IXErupLTosxWGk/Wz79KEwEFNjVOMvQ==}
-    dependencies:
-      '@sveltejs/adapter-cloudflare': 1.0.0-next.8
-      '@sveltejs/adapter-netlify': 1.0.0-next.42
-      '@sveltejs/adapter-vercel': 1.0.0-next.39
-    dev: true
-
-  /@sveltejs/adapter-cloudflare/1.0.0-next.8:
-    resolution: {integrity: sha512-uje8eUfP1xrMEdKczvjl0rpu7WTZZrZCBTgH2sTSYYiAqpCevsmJNZ9Lgh5U5a4BYBYGVvAcYdh8nzoddxOZkw==}
-    dependencies:
-      esbuild: 0.13.15
-    dev: true
-
-  /@sveltejs/adapter-netlify/1.0.0-next.42:
-    resolution: {integrity: sha512-C7KV4Nkgpbgrxuw5q2asr3uTHo0HIkHrWTkJCRWECJPwoD3r/OhKjiY3tER9FopVDDAUyAfIUj7nNFCzTMpW1g==}
-    dependencies:
-      '@iarna/toml': 2.2.5
-      esbuild: 0.13.15
-      tiny-glob: 0.2.9
-    dev: true
-
   /@sveltejs/adapter-static/1.0.0-next.26:
     resolution: {integrity: sha512-LXR0HkPygZ+m9wJhFqbYWbJ0jquhgUK6vL/8AwnqbAZGGtQFloMpf49WOANk7MiLBeY6L97W5jPLSxHiDW3T0Q==}
     dependencies:
       tiny-glob: 0.2.9
-    dev: true
-
-  /@sveltejs/adapter-vercel/1.0.0-next.39:
-    resolution: {integrity: sha512-YOPGKIILm26h22GN4/iliXce61aTG3Dq5hX8xpDx0cNuCocv0OoLfIqiGpdyJ9NIMpjwXmpVoL4+nV+yh2wcSA==}
-    dependencies:
-      esbuild: 0.13.15
     dev: true
 
   /@sveltejs/kit/1.0.0-next.240_svelte@3.46.2:
@@ -1157,6 +1127,11 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /highlight.js/11.4.0:
+    resolution: {integrity: sha512-nawlpCBCSASs7EdvZOYOYVkJpGmAOKMYZgZtUqSRqodZE0GRVcFKwo1RcpeOemqh9hyttTdd5wDBwHkuSyUfnA==}
+    engines: {node: '>=12.0.0'}
+    dev: true
+
   /ignore/4.0.6:
     resolution: {integrity: sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==}
     engines: {node: '>= 4'}
@@ -1775,6 +1750,12 @@ packages:
       - sass
       - stylus
       - sugarss
+    dev: true
+
+  /svelte-highlight/5.2.0:
+    resolution: {integrity: sha512-Gq0WFJdq7jDgj3BFmlfdZtE35O1XE1qDh2mIxkoMq0NQOn0WXcs24ZhioD/QHWpFOtT2KJOeCiMqjxJ0Am1m2Q==}
+    dependencies:
+      highlight.js: 11.4.0
     dev: true
 
   /svelte-hmr/0.14.9_svelte@3.46.2:

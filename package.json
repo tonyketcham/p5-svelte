@@ -33,7 +33,6 @@
 		"p5": "^1.4.0"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.26",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^4.31.1",
@@ -42,11 +41,13 @@
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
+		"highlight.js": "^11.4.0",
 		"postcss": "^8.4.5",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.2.6",
+		"svelte-highlight": "^5.2.0",
 		"svelte-preprocess": "^4.9.4",
 		"svelte2tsx": "^0.4.14",
 		"tailwindcss": "^3.0.15",
@@ -56,5 +57,6 @@
 	"peerDependencies": {
 		"p5": "^1.4.0"
 	},
-	"type": "module"
+	"type": "module",
+	"svelte": "index.js"
 }
