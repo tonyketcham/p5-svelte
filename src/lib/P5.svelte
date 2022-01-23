@@ -5,6 +5,7 @@
 	export let project = undefined;
 	export let target = undefined;
 	export let sketch = undefined;
+	export let parentDivStyle = 'display: block;';
 	export let debug = false;
 
 	// Event generation
@@ -66,11 +67,10 @@
 	});
 </script>
 
-<div use:ref />
+<div use:ref style={parentDivStyle} />
 
 <style>
 	div {
-		display: inline;
 		margin: 0;
 	}
 </style>
