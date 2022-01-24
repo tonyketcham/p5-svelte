@@ -34,31 +34,31 @@ Now add `p5-svelte` to your project (ex. `src/App.svelte`):
 
 ```svelte
 <script>
-	import P5 from 'p5-svelte';
-	let width = 55;
-	let height = 55;
+  import P5 from 'p5-svelte';
+  let width = 55;
+  let height = 55;
 
-	const sketch = (p5) => {
-		p5.setup = () => {
-			p5.createCanvas(400, 400);
-		};
+  const sketch = (p5) => {
+	  p5.setup = () => {
+	    p5.createCanvas(400, 400);
+	  };
 
-		p5.draw = () => {
-			p5.ellipse(p5.width / 2, p5.height / 2, width, height);
-		};
-	};
+	  p5.draw = () => {
+	    p5.ellipse(p5.width / 2, p5.height / 2, width, height);
+	  };
+  };
 </script>
 
 <label>
-	Width
-	<input type="range" bind:value={width} min="100" max="1000" step="0.01" />
-	{width}
+  Width
+  <input type="range" bind:value={width} min="100" max="1000" step="0.01" />
+  {width}
 </label>
 
 <label>
-	Height
-	<input type="range" bind:value={height} min="100" max="1000" step="0.01" />
-	{height}
+  Height
+  <input type="range" bind:value={height} min="100" max="1000" step="0.01" />
+  {height}
 </label>
 
 <P5 {sketch} />
@@ -86,12 +86,12 @@ You can access the internals of your p5 instance and the available native classe
 
 ## Events
 
-`p5-svelte` fires off a few events you can listen to on a `<P5/>` component.
+The `<P5/>` component emits a few events you can listen to.
 
 ### `ref`
 
-Dispatches a reference to the DOM element target which the p5 instance mounts to.
+Emits a reference to the DOM element target which the p5 instance mounts to.
 
 ### `init`
 
-This event fires on init of the p5 project instance, dispatching a reference to that p5 project instance object.
+This event fires on init of the p5 project instance, emitting a reference to that p5 project instance object.
