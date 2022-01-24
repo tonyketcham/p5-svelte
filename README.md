@@ -39,13 +39,13 @@ Now add `p5-svelte` to your project (ex. `src/App.svelte`):
   let height = 55;
 
   const sketch = (p5) => {
-	  p5.setup = () => {
-	    p5.createCanvas(400, 400);
-	  };
+    p5.setup = () => {
+      p5.createCanvas(400, 400);
+    };
 
-	  p5.draw = () => {
-	    p5.ellipse(p5.width / 2, p5.height / 2, width, height);
-	  };
+    p5.draw = () => {
+      p5.ellipse(p5.width / 2, p5.height / 2, width, height);
+    };
   };
 </script>
 
