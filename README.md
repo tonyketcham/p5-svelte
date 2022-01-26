@@ -1,4 +1,5 @@
 [![Build CI](https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml/badge.svg)](https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7dd33ce7-b638-4540-83d1-4442ef026efc/deploy-status)](https://app.netlify.com/sites/p5-svelte/deploys)
 [![npm version](https://badge.fury.io/js/p5-svelte.svg)](https://badge.fury.io/js/p5-svelte)
 
 <h1 align="center">🧙‍♂️ p5-Svelte 🕸
