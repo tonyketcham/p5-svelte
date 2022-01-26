@@ -2,8 +2,29 @@
 	import '../app.css';
 </script>
 
-<header class="flex justify-end fixed inset-0 bottom-auto p-3 text-white">
-	<nav>
+<svelte:head>
+	<title>p5-svelte</title>
+	<meta
+		name="description"
+		content="A component for easily using p5 sketches in Svelte. Allows using Svelte's reactivity system in p5."
+	/>
+	<meta
+		name="keywords"
+		content="p5, p5.js, svelte, generative, procedural, art, reactivity, component, p5-svelte"
+	/>
+</svelte:head>
+
+<header class="flex justify-between fixed inset-0 bottom-auto p-3 font-mono h-12">
+	<h1 class="w-32 text-lg"><a href="/" sveltekit:prefetch>p5-svelte</a></h1>
+	<nav aria-label="primary" class="my-auto">
+		<ul class="flex space-x-6 font-semibold text-p5">
+			<li>
+				<a href="/docs/get-started" sveltekit:prefetch class="hover:text-white">get started</a>
+			</li>
+			<li><a href="/examples" sveltekit:prefetch class="hover:text-white">examples</a></li>
+		</ul>
+	</nav>
+	<nav aria-label="external" class="flex justify-end w-32">
 		<a
 			href="https://github.com/tonyketcham/p5-svelte"
 			class="hover:text-svelte motion-safe:transition-colors"

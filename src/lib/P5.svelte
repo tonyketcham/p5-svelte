@@ -58,6 +58,9 @@
 			if (debug) {
 				console.log('p5 instance', instance);
 			}
+			// Set up a global object to capture this instance.
+			// @ts-ignore
+			window._p5Instance = instance;
 			return sketch(instance);
 		}, target);
 

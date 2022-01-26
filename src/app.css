@@ -34,3 +34,7 @@ input[type='range']::-moz-range-thumb {
 	border: 2px solid #ff3e00;
 	border-radius: 2px;
 }
+
+p > a {
+	@apply bg-p5;
+}

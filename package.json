@@ -1,6 +1,6 @@
 {
 	"name": "p5-svelte",
-	"description": "A component for easily using p5 sketches in Svelte. Allows passing Svelte props into a p5 sketch.",
+	"description": "A component for easily using p5 sketches in Svelte. Allows using Svelte's reactivity system in p5.",
 	"version": "3.0.1",
 	"keywords": [
 		"svelte",

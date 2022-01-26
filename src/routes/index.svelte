@@ -11,7 +11,7 @@
 		};
 
 		p5.draw = () => {
-			p5.background(0, 87);
+			p5.background(0);
 			p5.frameRate(60);
 			p5.stroke(237, 34, 93);
 			// Let's pick an angle 0 to 90 degrees based on the mouse position
