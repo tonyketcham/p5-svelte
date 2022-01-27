@@ -3,7 +3,7 @@ export function sketchExampleCode(sketch: string): string {
   import P5 from "$lib/P5.svelte";
   
   const sketch = ${sketch}
-  </script>
-  
-  <P5 {sketch} />`;
+</script>
+
+<P5 {sketch} />`;
 }

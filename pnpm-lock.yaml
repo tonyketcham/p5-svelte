@@ -5,11 +5,13 @@ specifiers:
   '@sveltejs/kit': next
   '@typescript-eslint/eslint-plugin': ^4.31.1
   '@typescript-eslint/parser': ^4.31.1
+  '@zerodevx/svelte-toast': ^0.6.3
   autoprefixer: ^10.4.2
   eslint: ^8.7.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^3.2.1
   highlight.js: ^11.4.0
+  highlightjs-svelte: ^1.0.6
   p5: ^1.4.0
   postcss: ^8.4.5
   prettier: ^2.4.1
@@ -28,14 +30,16 @@ dependencies:
 
 devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.26
-  '@sveltejs/kit': 1.0.0-next.240_svelte@3.46.2
+  '@sveltejs/kit': 1.0.0-next.245_svelte@3.46.2
   '@typescript-eslint/eslint-plugin': 4.33.0_402a8c5b5a1f299f4654290ac1452ffd
   '@typescript-eslint/parser': 4.33.0_eslint@8.7.0+typescript@4.5.5
+  '@zerodevx/svelte-toast': 0.6.3
   autoprefixer: 10.4.2_postcss@8.4.5
   eslint: 8.7.0
   eslint-config-prettier: 8.3.0_eslint@8.7.0
   eslint-plugin-svelte3: 3.4.0_eslint@8.7.0+svelte@3.46.2
   highlight.js: 11.4.0
+  highlightjs-svelte: 1.0.6
   postcss: 8.4.5
   prettier: 2.5.1
   prettier-plugin-svelte: 2.6.0_prettier@2.5.1+svelte@3.46.2
@@ -138,8 +142,8 @@ packages:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.240_svelte@3.46.2:
-    resolution: {integrity: sha512-cHdxdSKAdCuty2lYlRHXE4rJZuKd4wur9U63JtPwysTaReMEJl+s9J/LVvyBzaLW/13x8vm/kKqx+DDcI0udlA==}
+  /@sveltejs/kit/1.0.0-next.245_svelte@3.46.2:
+    resolution: {integrity: sha512-tvgzGA0nLsYNoCHfC0SCRbWWdLY4xP6Uyv3oy+J+5VOUOhzOjh3xiP6LKvF4PLf0t3lJXybcVWzi8vqU3kfjug==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -305,6 +309,10 @@ packages:
     dependencies:
       '@typescript-eslint/types': 4.33.0
       eslint-visitor-keys: 2.1.0
+    dev: true
+
+  /@zerodevx/svelte-toast/0.6.3:
+    resolution: {integrity: sha512-k0W1JFoqHIcIQaP9ij99+Rv0ugaQSSNwOuNwwmTGRjWtIqrQr+ExLDE8LQGXLlJIprqDyMWB4lJkUql/r0RAtA==}
     dev: true
 
   /acorn-jsx/5.3.2_acorn@8.7.0:
@@ -1088,6 +1096,10 @@ packages:
   /highlight.js/11.4.0:
     resolution: {integrity: sha512-nawlpCBCSASs7EdvZOYOYVkJpGmAOKMYZgZtUqSRqodZE0GRVcFKwo1RcpeOemqh9hyttTdd5wDBwHkuSyUfnA==}
     engines: {node: '>=12.0.0'}
+    dev: true
+
+  /highlightjs-svelte/1.0.6:
+    resolution: {integrity: sha512-aXuBPz8df3sOXg90q8rRcBLyxIR8ozPU39a6tJ2rpJUjjd9brRIr55aC0IccW4gsPhQxZ+B3rFugdXsg9/ckDw==}
     dev: true
 
   /ignore/4.0.6:

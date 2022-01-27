@@ -1,4 +1,5 @@
 <script>
+	import { SvelteToast } from '@zerodevx/svelte-toast';
 	import '../app.css';
 </script>
 
@@ -49,3 +50,19 @@
 	</nav>
 </header>
 <slot />
+
+<SvelteToast />
+
+<style>
+	:root {
+		--toastContainerTop: auto;
+		--toastContainerRight: 3rem;
+		--toastContainerBottom: 1.5rem;
+		--toastContainerLeft: auto;
+		--toastColor: rgba(255, 255, 255, 0.6);
+		--toastBackground: #121212;
+		--toastBarBackground: rgb(237, 34, 93);
+		--toastBorderRadius: 0;
+		--toastBorder: 1px solid rgba(255, 255, 255, 0.1);
+	}
+</style>
