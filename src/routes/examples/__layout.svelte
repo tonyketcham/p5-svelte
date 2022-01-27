@@ -21,6 +21,8 @@
 <MainContainer>
 	<Sidebar header="Examples" elements={examples} />
 	<div class="overflow-auto p-6 flex-1">
-		<slot />
+		<div class="max-w-[90ch]">
+			<slot />
+		</div>
 	</div>
 </MainContainer>

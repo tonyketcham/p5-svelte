@@ -17,7 +17,7 @@
 	};
 </script>
 
-<article id="get-started" class="flex flex-col space-y-3 max-w-prose">
+<article id="get-started" class="flex flex-col space-y-3 max-w-[90ch]">
 	<h2 class="text-4xl">Get Started</h2>
 	<p>
 		Trying to get <a href="https://p5js.org/">p5</a> up and running in

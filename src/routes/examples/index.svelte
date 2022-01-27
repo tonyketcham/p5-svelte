@@ -1,4 +1,4 @@
-<section class="max-w-prose">
+<section>
 	<h1 class="text-6xl mb-6">Learn by Example</h1>
 	<p>
 		Explore the examples listed in the sidebar to your heart's content. These should serve as a
