@@ -2,7 +2,7 @@
 	import P5 from '$lib/P5.svelte';
 	import CodeBlock from '../../components/CodeBlock.svelte';
 
-	const sketch = (p5) => {
+	const sketch = `(p5) => {
 		p5.setup = () => {
 			p5.createCanvas(800, 400, p5.WEBGL);
 		};
@@ -35,7 +35,8 @@
 				}
 			}
 		};
-	};
+	};`;
+	const sketchFunct = eval(sketch);
 </script>
 
 <article class="flex flex-col space-y-3">
@@ -46,7 +47,7 @@
 			>this p5 example</a
 		>.
 	</p>
-	<P5 {sketch} />
+	<P5 sketch={sketchFunct} />
 	<section class="pt-3">
 		<h3 class="text-2xl text-p5">Code</h3>
 		<CodeBlock isSketch code={sketch} />
