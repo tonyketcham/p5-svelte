@@ -1,13 +1,14 @@
-[![Build CI](https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml/badge.svg)](https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7dd33ce7-b638-4540-83d1-4442ef026efc/deploy-status)](https://app.netlify.com/sites/p5-svelte/deploys)
-[![npm version](https://badge.fury.io/js/p5-svelte.svg)](https://badge.fury.io/js/p5-svelte)
-
-<h1 align="center">🧙‍♂️ p5-Svelte 🕸
 <div align="center">
-<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--5L4QI4B_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/ozuet5qpew6t9rup6o4p.gif" alt="10print made using p5-svelte" width="265" height="265" />
+<img src="https://github.com/rbrdl/p5-svelte/raw/master/logo.svg" alt="p5-svelte logo" width="100" />
 </div>
-</h1>
-<p>
+
+<h1 align="center">p5-Svelte</h1>
+
+<p align="center">
+<a href="https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml"><img src="https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml/badge.svg" alt="Build CI"></a>
+<a href="https://app.netlify.com/sites/p5-svelte/deploys"><img src="https://api.netlify.com/api/v1/badges/7dd33ce7-b638-4540-83d1-4442ef026efc/deploy-status" alt="Netlify Status"></a>
+<a href="https://badge.fury.io/js/p5-svelte"><img src="https://badge.fury.io/js/p5-svelte.svg" alt="NPM version"></a>
+</p>
 
 Trying to get <a href="https://p5js.org/">p5</a> up and running in [Svelte](https://svelte.dev/) can be a pain. So here's an absolutely dead simple way of tossing it into your project.
 
