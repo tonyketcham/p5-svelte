@@ -7,9 +7,9 @@
 <h1 align="center">p5-Svelte</h1>
 
 <p align="center">
-<a href="https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml"><img src="https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml/badge.svg" alt="Build CI"></a>
-<a href="https://app.netlify.com/sites/p5-svelte/deploys"><img src="https://api.netlify.com/api/v1/badges/7dd33ce7-b638-4540-83d1-4442ef026efc/deploy-status" alt="Netlify Status"></a>
-<a href="https://badge.fury.io/js/p5-svelte"><img src="https://badge.fury.io/js/p5-svelte.svg" alt="NPM version"></a>
+<a href="https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml"><img src="https://img.shields.io/github/workflow/status/tonyketcham/p5-svelte/Build%20CI?logo=github" alt="Build CI"></a>
+<a href="https://app.netlify.com/sites/p5-svelte/deploys"><img src="https://img.shields.io/netlify/7dd33ce7-b638-4540-83d1-4442ef026efc?logo=netlify&logoColor=white" alt="Netlify Status"></a>
+<a href="https://www.npmjs.com/package/p5-svelte"><img src="https://img.shields.io/npm/v/p5-svelte?color=%23ed225d" alt="NPM version"></a>
 </p>
 
 Trying to get <a href="https://p5js.org/">p5</a> up and running in [Svelte](https://svelte.dev/) can be a pain. So here's an absolutely dead simple way of tossing it into your project.
