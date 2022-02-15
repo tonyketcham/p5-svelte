@@ -1,7 +1,7 @@
 <br>
 
 <div align="center">
-<img src="https://github.com/rbrdl/p5-svelte/raw/master/logo.svg" alt="p5-svelte logo" width="100" />
+<img src="https://github.com/rbrdl/p5-svelte/raw/master/logo.svg" alt="p5-svelte logo" width="80" />
 </div>
 
 <h1 align="center">p5-Svelte</h1>
