@@ -22,7 +22,7 @@ The API is super simple; you get a <code>P5</code> component which accepts a <co
 
 ## Usage
 
-Install:
+### Install:
 
 ```ps
 pnpm i p5-svelte
@@ -68,13 +68,15 @@ Now add `p5-svelte` to your project (ex. `src/App.svelte`):
 <P5 {sketch} />
 ```
 
-### Output
+### Output:
 
 ![using Svelte's reactivity system to bind parameters to a p5 sketch](https://dev-to-uploads.s3.amazonaws.com/i/ajyz894enhdgdvot441x.gif)
 
 <!-- <img align="right" src="https://dev-to-uploads.s3.amazonaws.com/i/ajyz894enhdgdvot441x.gif" alt="using Svelte's reactivity system to bind parameters to a p5 sketch" width="265" height="265" /> -->
 
-It's that easy!
+**It's that easy! 😃**
+
+<br>
 
 ## p5.js instance mode
 
