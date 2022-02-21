@@ -1,7 +1,7 @@
 <br>
 
 <div align="center">
-<img src="/static/logo.svg" alt="p5-svelte logo" width="80" />
+<img src="https://github.com/tonyketcham/p5-svelte/raw/master/static/logo.svg" alt="p5-svelte logo" width="80" />
 </div>
 
 <h1 align="center">p5-Svelte</h1>
