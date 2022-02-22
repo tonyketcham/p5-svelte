@@ -1,7 +1,8 @@
 <script>
 	import P5 from '$lib/P5.svelte';
+	import RangeSlider from "svelte-range-slider-pips";
 
-	let branchHeight = 120;
+	let branchHeight = [150];
 
 	const sketch = (p5) => {
 		let theta;
@@ -13,9 +14,12 @@
 		p5.draw = () => {
 			p5.background(0);
 			p5.frameRate(60);
-			p5.stroke(237, 34, 93);
+			p5.stroke('#ed225d');
+			// p5.strokeWeight(2);
 			// Let's pick an angle 0 to 90 degrees based on the mouse position
 			let a = (p5.mouseX / p5.width) * 90;
+			// Branch height based on Y axis
+			// let branchHeight = 150 - ((p5.mouseY / p5.height) * 100);
 			// Convert it to radians
 			theta = p5.radians(a);
 			// Start the tree from the bottom of the screen
@@ -25,7 +29,7 @@
 			// Move to the end of that line
 			p5.translate(0, -120);
 			// Start the recursive branching!
-			branch(branchHeight);
+			branch(branchHeight[0]);
 		};
 
 		function branch(h) {
@@ -58,10 +62,19 @@
 	<title>p5-svelte</title>
 </svelte:head>
 
-<main class="h-full grid place-items-center font-mono">
-	<section class="relative flex flex-col justify-center">
-		<div class="z-50">
-			<div class="flex justify-center pb-10 -mr-3 drop-shadow-lg">
+<main class="h-full grid place-items-center font-mono overflow-hidden">
+	<section class="flex flex-col relative justify-center items-center">
+
+		<div class="absolute top-[40%] text-xl flex flex-col items-center gap-4">
+			<img src="/static/logo.svg" alt="p5.js logo" class="w-[60px] z-50 drop-shadow-lg"/>
+			<!-- <h1>p5-svelte</h1> -->
+		</div>
+
+		<P5 {sketch} debug/>
+
+		<div class="z-50 relative bottom-36 flex flex-col gap-20 items-center">
+
+			<div class="flex relative left-[46px] drop-shadow-lg">
 				<a
 					href="https://p5js.org/"
 					aria-label="p5 Docs"
@@ -69,16 +82,16 @@
 				>
 					<img src="/p5js.svg" alt="p5.js logo" width="100" class="block" />
 				</a>
-				<span class="my-auto ml-6 mr-4 text-2xl text-gray-100">+</span>
+				<span class="my-auto ml-6 mr-4 text-2xl text-white/80">+</span>
 				<a
 					href="https://svelte.dev/"
 					aria-label="Svelte Docs"
 					class="transform hover:-translate-y-1 motion-safe:transition-transform"
 				>
-					<img src="/svelte-logo-horizontal.svg" alt="p5.js logo" width="200" />
+				<img src="/svelte-logo-horizontal.svg" alt="p5.js logo" width="200" />
 				</a>
 			</div>
-			<div class="my-1 text-white">
+			<!-- <div class="my-1 text-white">
 				<label for="branches">Branch height:</label>
 				<input
 					type="range"
@@ -90,13 +103,11 @@
 					class="drop-shadow-sm"
 				/>
 				<span>{branchHeight}</span>
+			</div> -->
+			<div class="w-[600px] text-center text-p5" style="--range-handle-focus:#ed225d; --range-handle:#ed225daa; --range-handle-inactive:#ed225d;--range-slider:#fff1">
+				<RangeSlider bind:values={branchHeight} min={40} max={260} float/>
+				<p>Branch height</p>
 			</div>
 		</div>
-
-		<P5
-			{sketch}
-			debug
-			parentDivStyle="position: absolute; left: 0; right: 0; display: flex; justify-content: center;"
-		/>
 	</section>
 </main>

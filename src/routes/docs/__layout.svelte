@@ -4,14 +4,14 @@
 
 	const docs = [
 		{
-			title: 'Get Started',
-			route: 'get-started',
+			title: '⫸ Get Started',
+			route: '/docs/get-started',
 		},
 	];
 </script>
 
 <MainContainer>
-	<Sidebar header="Docs" elements={docs} />
+	<Sidebar header="📘 Docs" elements={docs} />
 	<div class="overflow-auto p-6 flex-1">
 		<slot />
 	</div>

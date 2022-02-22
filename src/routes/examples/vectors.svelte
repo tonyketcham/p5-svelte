@@ -6,6 +6,7 @@
 		p5.setup = () => {
 			p5.createCanvas(800, 400);
 			p5.background(0);
+			p5.stroke('#ed225d');
 		};
 
 		p5.draw = () => {
@@ -15,7 +16,6 @@
 			v.mult(p5.random(50, 100));
 
 			p5.strokeWeight(1);
-			p5.stroke(255, 200);
 			p5.line(0, 0, v.x, v.y);
 		};
 	};`;
@@ -24,7 +24,7 @@
 </script>
 
 <article class="flex flex-col space-y-3">
-	<h2 class="text-4xl">Random Vectors</h2>
+	<h2 class="text-4xl">↗ Random Vectors</h2>
 	<p>
 		Adapted from Daniel Shiffman's <i>The Nature of Code</i>
 		<a
@@ -32,7 +32,10 @@
 			target="_blank">example</a
 		>.
 	</p>
-	<P5 sketch={sketchFunct} />
+	<h3 class="text-2xl text-p5">Sketch</h3>
+	<div class=" border border-p5/40 rounded-md overflow-hidden">
+		<P5 sketch={sketchFunct} />
+	</div>
 	<section class="pt-3">
 		<h3 class="text-2xl text-p5">Code</h3>
 		<CodeBlock isSketch code={sketch} />

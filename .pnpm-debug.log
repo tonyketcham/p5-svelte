@@ -1,0 +1,19 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "errno": 1,
+    "code": "ELIFECYCLE",
+    "pkgid": "p5-svelte@3.0.1",
+    "stage": "dev",
+    "script": "svelte-kit dev",
+    "pkgname": "p5-svelte",
+    "err": {
+      "name": "pnpm",
+      "message": "p5-svelte@3.0.1 dev: `svelte-kit dev`\nExit status 1",
+      "code": "ELIFECYCLE",
+      "stack": "pnpm: p5-svelte@3.0.1 dev: `svelte-kit dev`\nExit status 1\n    at EventEmitter.<anonymous> (C:\\Users\\Romain\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.29.1\\node_modules\\pnpm\\dist\\pnpm.cjs:105646:20)\n    at EventEmitter.emit (node:events:390:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Romain\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.29.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92194:18)\n    at ChildProcess.emit (node:events:390:28)\n    at maybeClose (node:internal/child_process:1064:16)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:301:5)"
+    }
+  }
+}

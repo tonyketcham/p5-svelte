@@ -6,35 +6,6 @@ html {
 	background: black;
 }
 
-input[type='range'] {
-	-webkit-appearance: none;
-	height: 0;
-	border: 2px solid rgb(255, 255, 255);
-	border-radius: 2px;
-}
-
-/* for chrome/safari */
-input[type='range']::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	appearance: none;
-	width: 6px;
-	height: 30px;
-	background: #ff3e00;
-	cursor: pointer;
-	border: 2px solid #ff3e00;
-	border-radius: 2px;
-}
-
-/* for firefox */
-input[type='range']::-moz-range-thumb {
-	width: 6px;
-	height: 30px;
-	background: #ff3e00;
-	cursor: pointer;
-	border: 2px solid #ff3e00;
-	border-radius: 2px;
-}
-
 p > a {
-	@apply bg-p5;
+	@apply bg-p5/80 py-0.5 px-1 rounded;
 }
