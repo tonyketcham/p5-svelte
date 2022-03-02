@@ -66,7 +66,7 @@
 	<section class="flex flex-col relative justify-center items-center">
 
 		<div class="absolute top-[40%] text-xl flex flex-col items-center gap-4">
-			<img src="/static/logo.svg" alt="p5.js logo" class="w-[60px] z-50 drop-shadow-lg"/>
+			<img src="/logo.svg" alt="p5.js logo" class="w-[60px] z-50 drop-shadow-lg"/>
 			<!-- <h1>p5-svelte</h1> -->
 		</div>
 

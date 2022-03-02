@@ -19,7 +19,7 @@
 <header class="fixed flex justify-between items-center inset-0 p-8 font-mono h-20 bg-black z-10 border-b border-white/10">
 	<a href="/" sveltekit:prefetch class="bg-p5/0 rounded-md">
 		<div class="flex gap-3 items-center text-xl">
-			<img src="/static/logo.svg" alt="" class="w-8">
+			<img src="/logo.svg" alt="" class="w-8">
 			<h1>p5-svelte</h1>
 		</div>
 	</a>
