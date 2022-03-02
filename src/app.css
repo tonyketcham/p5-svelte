@@ -5,6 +5,9 @@
 html {
 	background: black;
 }
+body {
+	color: white;
+}
 
 p > a {
 	@apply bg-p5/80 py-0.5 px-1 rounded;
