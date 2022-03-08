@@ -61,6 +61,7 @@
 			style="--range-handle-focus:#ed225d; --range-handle:#ed225daa; --range-handle-inactive:#ed225d;"
 		>
 			<RangeSlider
+				id="get-started-sketch-range"
 				bind:values={dimensions}
 				min={100}
 				max={1000}
@@ -68,7 +69,7 @@
 				pips
 				pipstep={100}
 				all="label"
-				id="slider"
+				hoverable
 			/>
 		</div>
 	</section>
@@ -80,5 +81,16 @@
 	}
 	code {
 		@apply bg-gray-700 py-0.5 px-1 rounded;
+	}
+	:global(#get-started-sketch-range.rangeSlider .rangeHandle:nth-of-type(1) .rangeNub:before),
+	:global(#get-started-sketch-range.rangeSlider .rangeHandle:nth-of-type(2) .rangeNub:before) {
+		content: 'x';
+		@apply text-white;
+	}
+	:global(#get-started-sketch-range.rangeSlider .rangeHandle:nth-of-type(2) .rangeNub:before) {
+		content: 'y';
+	}
+	:global(#get-started-sketch-range.rangeSlider .rangeNub) {
+		@apply text-center text-xs font-mono leading-5;
 	}
 </style>
