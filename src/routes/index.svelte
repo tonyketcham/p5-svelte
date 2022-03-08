@@ -2,7 +2,7 @@
 	import P5 from '$lib/P5.svelte';
 	import RangeSlider from 'svelte-range-slider-pips';
 
-	let branchHeight = 150;
+	let branchHeight = [150];
 
 	const sketch = (p5) => {
 		let theta;
@@ -84,7 +84,7 @@
 					aria-label="Svelte Docs"
 					class="transform hover:-translate-y-1 motion-safe:transition-transform"
 				>
-				<img src="/svelte-logo-horizontal.svg" alt="p5.js logo" width="200" />
+					<img src="/svelte-logo-horizontal.svg" alt="p5.js logo" width="200" />
 				</a>
 			</div>
 			<div
