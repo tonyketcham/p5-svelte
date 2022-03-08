@@ -17,6 +17,8 @@
 			p5.stroke('#ed225d');
 			// Let's pick an angle 0 to 90 degrees based on the mouse position
 			let a = (p5.mouseX / p5.width) * 90;
+			// Branch height based on Y axis
+			// let branchHeight = 150 - ((p5.mouseY / p5.height) * 100);
 			// Convert it to radians
 			theta = p5.radians(a);
 			// Start the tree from the bottom of the screen
@@ -26,7 +28,7 @@
 			// Move to the end of that line
 			p5.translate(0, -120);
 			// Start the recursive branching!
-			branch(branchHeight);
+			branch(branchHeight[0]);
 		};
 
 		function branch(h) {
@@ -82,7 +84,7 @@
 					aria-label="Svelte Docs"
 					class="transform hover:-translate-y-1 motion-safe:transition-transform"
 				>
-					<img src="/svelte-logo-horizontal.svg" alt="p5.js logo" width="200" />
+				<img src="/svelte-logo-horizontal.svg" alt="p5.js logo" width="200" />
 				</a>
 			</div>
 			<div
