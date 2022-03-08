@@ -70,10 +70,5 @@
 	});
 </script>
 
-<div use:ref style={parentDivStyle} />
+<div use:ref style={parentDivStyle} class="m-0"/>
 
-<style>
-	div {
-		margin: 0;
-	}
-</style>

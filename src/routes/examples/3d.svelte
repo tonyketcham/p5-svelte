@@ -8,7 +8,7 @@
 		};
 
 		p5.draw = () => {
-			p5.background(250);
+			p5.background(0);
 			let radius = p5.width * 1.5;
 
 			//drag to move the world.
@@ -40,14 +40,17 @@
 </script>
 
 <article class="flex flex-col space-y-3">
-	<h2 class="text-4xl">3D: Orbit Control</h2>
+	<h2 class="text-4xl">◎ 3D: Orbit Control</h2>
 	<p>Click and drag on the canvas for orbit control; it allows you to move around the world.</p>
 	<p>
 		Adapted from <a href="https://p5js.org/examples/3d-orbit-control.html" target="_blank"
 			>this p5 example</a
 		>.
 	</p>
-	<P5 sketch={sketchFunct} />
+	<h3 class="text-2xl text-p5">Sketch</h3>
+	<div class="border border-p5/40 rounded-md overflow-hidden">
+		<P5 sketch={sketchFunct} />
+	</div>
 	<section class="pt-3">
 		<h3 class="text-2xl text-p5">Code</h3>
 		<CodeBlock isSketch code={sketch} />

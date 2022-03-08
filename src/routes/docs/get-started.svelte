@@ -2,9 +2,11 @@
 	import P5 from '$lib/P5.svelte';
 	import CodeBlock from '$components/CodeBlock.svelte';
 	import gettingStartedExample from '$helpers/gettingStartedExample';
+	import RangeSlider from "svelte-range-slider-pips";
 
-	let width = 55;
-	let height = 55;
+	let dimensions = [180, 130]
+	$: width = dimensions[0];
+	$: height = dimensions[1];
 
 	const sketch = (p5) => {
 		p5.setup = () => {
@@ -18,7 +20,7 @@
 </script>
 
 <article id="get-started" class="flex flex-col space-y-3 max-w-[90ch]">
-	<h2 class="text-4xl">Get Started</h2>
+	<h2 class="text-4xl pb-2">⫸ Get Started</h2>
 	<p>
 		Trying to get <a href="https://p5js.org/">p5</a> up and running in
 		<a href="https://svelte.dev">Svelte</a> can be a pain. So here's an absolutely dead simple way of
@@ -48,31 +50,23 @@
 			<h3 class="text-2xl text-p5">Code</h3>
 			<CodeBlock code={gettingStartedExample} />
 		</section>
-		<h3 class="text-xl mb-3">Output</h3>
+		<h3 class="text-xl">Output</h3>
 
-		<label>
-			Width
-			<input type="range" bind:value={width} min="100" max="1000" step="0.01" />
-			{width}
-		</label>
-
-		<label>
-			Height
-			<input type="range" bind:value={height} min="100" max="1000" step="0.01" />
-			{height}
-		</label>
-
-		<P5 {sketch} />
+		<div class="border border-p5/40 rounded-md overflow-hidden mt-3">
+			<P5 {sketch} />
+		</div>
+		
+		<div class="m-20 mt-12" style="--range-handle-focus:#ed225d; --range-handle:#ed225daa; --range-handle-inactive:#ed225d;">
+			<RangeSlider bind:values={dimensions} min={100} max={1000} float pips pipstep={100} all='label' id="slider"/>
+		</div>
 	</section>
 </article>
 
-<style lang="postcss">
+<style>
 	p {
 		@apply mb-3 opacity-90;
 	}
 	code {
-		@apply bg-gray-700;
-		@apply py-0.5 px-1;
-		@apply rounded;
+		@apply bg-gray-700 py-0.5 px-1 rounded;
 	}
 </style>

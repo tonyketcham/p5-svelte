@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import { SvelteToast } from '@zerodevx/svelte-toast';
 	import '../app.css';
 </script>
@@ -15,20 +16,28 @@
 	/>
 </svelte:head>
 
-<header class="flex justify-between fixed inset-0 bottom-auto p-3 font-mono h-12">
-	<h1 class="w-32 text-lg"><a href="/" sveltekit:prefetch>p5-svelte</a></h1>
-	<nav aria-label="primary" class="my-auto">
-		<ul class="flex space-x-6 font-semibold text-p5">
-			<li>
-				<a href="/docs/get-started" sveltekit:prefetch class="hover:text-white">get started</a>
-			</li>
-			<li><a href="/examples" sveltekit:prefetch class="hover:text-white">examples</a></li>
+<header class="fixed flex justify-between items-center inset-0 p-8 font-mono h-20 bg-black z-10 border-b border-white/10">
+	<a href="/" sveltekit:prefetch class="bg-p5/0 rounded-md">
+		<div class="flex gap-3 items-center text-xl">
+			<img src="/logo.svg" alt="" class="w-8">
+			<h1>p5-svelte</h1>
+		</div>
+	</a>
+	<nav aria-label="primary" class="text-p5 font-semibold">
+		<ul class="flex space-x-2">
+			<li><a href="/docs/get-started" sveltekit:prefetch class="bg-p5/20 px-4 py-2 rounded 
+				{$page.url.pathname.startsWith('/docs') ? 'outline outline-1' : 'hover:bg-white/20 hover:text-white'}"
+					>⫸ Get started</a></li>
+
+			<li><a href="/examples" sveltekit:prefetch class="bg-p5/20 px-4 py-2 rounded 
+				{$page.url.pathname.startsWith('/examples') ? 'outline outline-1' : 'hover:bg-white/20 hover:text-white'}"
+					>◫ Examples</a></li>
 		</ul>
 	</nav>
 	<nav aria-label="external" class="flex justify-end w-32">
 		<a
 			href="https://github.com/tonyketcham/p5-svelte"
-			class="hover:text-svelte motion-safe:transition-colors"
+			class="hover:text-p5 motion-safe:transition-colors"
 			target="_blank"
 		>
 			<svg
@@ -49,7 +58,8 @@
 		</a>
 	</nav>
 </header>
-<slot />
+
+<slot/>
 
 <SvelteToast />
 

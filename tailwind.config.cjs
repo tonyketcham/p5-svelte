@@ -3,7 +3,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				p5: 'rgb(237, 34, 93)',
+				p5: '#ed225d',
 				svelte: '#ff3e00',
 			},
 		},
