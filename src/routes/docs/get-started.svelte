@@ -10,7 +10,7 @@
 
 	const sketch = (p5) => {
 		p5.setup = () => {
-			p5.createCanvas(800, 400);
+			p5.createCanvas(865, 400);
 		};
 
 		p5.draw = () => {

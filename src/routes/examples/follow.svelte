@@ -14,7 +14,7 @@
 		}
 
 		p5.setup = () => {
-			p5.createCanvas(800, 400);
+			p5.createCanvas(865, 400);
 			p5.strokeWeight(12);
 			p5.stroke('#ed225d80');
 		};
