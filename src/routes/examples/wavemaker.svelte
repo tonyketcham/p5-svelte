@@ -6,7 +6,7 @@
 		let t = 0; // time variable
 
 		p5.setup = () => {
-			p5.createCanvas(800, 400);
+			p5.createCanvas(865, 400);
 			p5.noStroke();
 			p5.fill('#ed225d');
 		};
@@ -42,7 +42,10 @@
 
 <article class="flex flex-col space-y-3">
 	<h2 class="text-4xl">〰 Wavemaker</h2>
-	<p>This illustrates how waves (like water waves) emerge from particles oscillating in place. Move your mouse to direct the wave.</p>
+	<p>
+		This illustrates how waves (like water waves) emerge from particles oscillating in place. Move
+		your mouse to direct the wave.
+	</p>
 	<p>
 		Adapted from <a href="https://p5js.org/examples/interaction-wavemaker.html" target="_blank"
 			>this p5 example</a

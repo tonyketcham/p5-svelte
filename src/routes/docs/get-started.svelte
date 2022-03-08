@@ -2,15 +2,15 @@
 	import P5 from '$lib/P5.svelte';
 	import CodeBlock from '$components/CodeBlock.svelte';
 	import gettingStartedExample from '$helpers/gettingStartedExample';
-	import RangeSlider from "svelte-range-slider-pips";
+	import RangeSlider from 'svelte-range-slider-pips';
 
-	let dimensions = [180, 130]
+	let dimensions = [180, 130];
 	$: width = dimensions[0];
 	$: height = dimensions[1];
 
 	const sketch = (p5) => {
 		p5.setup = () => {
-			p5.createCanvas(800, 400);
+			p5.createCanvas(865, 400);
 		};
 
 		p5.draw = () => {
@@ -55,9 +55,21 @@
 		<div class="border border-p5/40 rounded-md overflow-hidden mt-3">
 			<P5 {sketch} />
 		</div>
-		
-		<div class="m-20 mt-12" style="--range-handle-focus:#ed225d; --range-handle:#ed225daa; --range-handle-inactive:#ed225d;">
-			<RangeSlider bind:values={dimensions} min={100} max={1000} float pips pipstep={100} all='label' id="slider"/>
+
+		<div
+			class="m-20 mt-12"
+			style="--range-handle-focus:#ed225d; --range-handle:#ed225daa; --range-handle-inactive:#ed225d;"
+		>
+			<RangeSlider
+				bind:values={dimensions}
+				min={100}
+				max={1000}
+				float
+				pips
+				pipstep={100}
+				all="label"
+				id="slider"
+			/>
 		</div>
 	</section>
 </article>

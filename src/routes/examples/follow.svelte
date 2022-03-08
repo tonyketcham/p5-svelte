@@ -14,7 +14,7 @@
 		}
 
 		p5.setup = () => {
-			p5.createCanvas(800, 400);
+			p5.createCanvas(865, 400);
 			p5.strokeWeight(12);
 			p5.stroke('#ed225d80');
 		};
@@ -50,7 +50,10 @@
 
 <article class="flex flex-col space-y-3">
 	<h2 class="text-4xl">↬ Follow</h2>
-	<p>A segmented line follows the mouse. The relative angle from each segment to the next is calculated with atan2() and the position of the next is calculated with sin() and cos().</p>
+	<p>
+		A segmented line follows the mouse. The relative angle from each segment to the next is
+		calculated with atan2() and the position of the next is calculated with sin() and cos().
+	</p>
 	<p>
 		Adapted from <a href="https://p5js.org/examples/interaction-follow-3.html" target="_blank"
 			>this p5 example</a
