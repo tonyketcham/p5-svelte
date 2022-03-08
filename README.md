@@ -38,31 +38,31 @@ Now add `p5-svelte` to your project (ex. `src/App.svelte`):
 
 ```svelte
 <script>
-  import P5 from 'p5-svelte';
-  let width = 55;
-  let height = 55;
+	import P5 from 'p5-svelte';
+	let width = 55;
+	let height = 55;
 
-  const sketch = (p5) => {
-    p5.setup = () => {
-      p5.createCanvas(400, 400);
-    };
+	const sketch = (p5) => {
+		p5.setup = () => {
+			p5.createCanvas(400, 400);
+		};
 
-    p5.draw = () => {
-      p5.ellipse(p5.width / 2, p5.height / 2, width, height);
-    };
-  };
+		p5.draw = () => {
+			p5.ellipse(p5.width / 2, p5.height / 2, width, height);
+		};
+	};
 </script>
 
 <label>
-  Width
-  <input type="range" bind:value={width} min="100" max="1000" step="0.01" />
-  {width}
+	Width
+	<input type="range" bind:value={width} min="100" max="1000" step="0.01" />
+	{width}
 </label>
 
 <label>
-  Height
-  <input type="range" bind:value={height} min="100" max="1000" step="0.01" />
-  {height}
+	Height
+	<input type="range" bind:value={height} min="100" max="1000" step="0.01" />
+	{height}
 </label>
 
 <P5 {sketch} />
@@ -87,7 +87,7 @@ Svelte doesn't allow us to globally expose the p5 library by installing it to th
 You can access the internals of your p5 instance and the available native classes that `p5-svelte` automatically makes available to your project via passing the `debug` prop:
 
 ```svelte
-<P5 {sketch} debug/>
+<P5 {sketch} debug />
 ```
 
 ## Events

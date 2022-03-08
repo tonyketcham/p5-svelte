@@ -42,7 +42,10 @@
 
 <article class="flex flex-col space-y-3">
 	<h2 class="text-4xl">〰 Wavemaker</h2>
-	<p>This illustrates how waves (like water waves) emerge from particles oscillating in place. Move your mouse to direct the wave.</p>
+	<p>
+		This illustrates how waves (like water waves) emerge from particles oscillating in place. Move
+		your mouse to direct the wave.
+	</p>
 	<p>
 		Adapted from <a href="https://p5js.org/examples/interaction-wavemaker.html" target="_blank"
 			>this p5 example</a

@@ -16,22 +16,38 @@
 	/>
 </svelte:head>
 
-<header class="fixed flex justify-between items-center inset-0 p-8 font-mono h-20 bg-black z-10 border-b border-white/10">
+<header
+	class="fixed flex justify-between items-center inset-0 p-8 font-mono h-20 bg-black z-10 border-b border-white/10"
+>
 	<a href="/" sveltekit:prefetch class="bg-p5/0 rounded-md">
 		<div class="flex gap-3 items-center text-xl">
-			<img src="/logo.svg" alt="" class="w-8">
+			<img src="/logo.svg" alt="" class="w-8" />
 			<h1>p5-svelte</h1>
 		</div>
 	</a>
 	<nav aria-label="primary" class="text-p5 font-semibold">
 		<ul class="flex space-x-2">
-			<li><a href="/docs/get-started" sveltekit:prefetch class="bg-p5/20 px-4 py-2 rounded 
-				{$page.url.pathname.startsWith('/docs') ? 'outline outline-1' : 'hover:bg-white/20 hover:text-white'}"
-					>⫸ Get started</a></li>
+			<li>
+				<a
+					href="/docs/get-started"
+					sveltekit:prefetch
+					class="bg-p5/20 px-4 py-2 rounded 
+				{$page.url.pathname.startsWith('/docs')
+						? 'outline outline-1'
+						: 'hover:bg-white/20 hover:text-white'}">⫸ Get started</a
+				>
+			</li>
 
-			<li><a href="/examples" sveltekit:prefetch class="bg-p5/20 px-4 py-2 rounded 
-				{$page.url.pathname.startsWith('/examples') ? 'outline outline-1' : 'hover:bg-white/20 hover:text-white'}"
-					>◫ Examples</a></li>
+			<li>
+				<a
+					href="/examples"
+					sveltekit:prefetch
+					class="bg-p5/20 px-4 py-2 rounded 
+				{$page.url.pathname.startsWith('/examples')
+						? 'outline outline-1'
+						: 'hover:bg-white/20 hover:text-white'}">◫ Examples</a
+				>
+			</li>
 		</ul>
 	</nav>
 	<nav aria-label="external" class="flex justify-end w-32">
@@ -59,7 +75,7 @@
 	</nav>
 </header>
 
-<slot/>
+<slot />
 
 <SvelteToast />
 

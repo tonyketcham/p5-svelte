@@ -70,5 +70,4 @@
 	});
 </script>
 
-<div use:ref style={parentDivStyle} class="m-0"/>
-
+<div use:ref style={parentDivStyle} class="m-0" />
