@@ -2,7 +2,7 @@
 	import P5 from '$lib/P5.svelte';
 	import RangeSlider from 'svelte-range-slider-pips';
 
-	let branchHeight = [150];
+	let branchHeight = 150;
 
 	const sketch = (p5) => {
 		let theta;
@@ -15,11 +15,8 @@
 			p5.background(0);
 			p5.frameRate(60);
 			p5.stroke('#ed225d');
-			// p5.strokeWeight(2);
 			// Let's pick an angle 0 to 90 degrees based on the mouse position
 			let a = (p5.mouseX / p5.width) * 90;
-			// Branch height based on Y axis
-			// let branchHeight = 150 - ((p5.mouseY / p5.height) * 100);
 			// Convert it to radians
 			theta = p5.radians(a);
 			// Start the tree from the bottom of the screen
@@ -29,7 +26,7 @@
 			// Move to the end of that line
 			p5.translate(0, -120);
 			// Start the recursive branching!
-			branch(branchHeight[0]);
+			branch(branchHeight);
 		};
 
 		function branch(h) {
@@ -66,7 +63,6 @@
 	<section class="flex flex-col relative justify-center items-center">
 		<div class="absolute top-[40%] text-xl flex flex-col items-center gap-4">
 			<img src="/logo.svg" alt="p5.js logo" class="w-[60px] z-50 drop-shadow-lg" />
-			<!-- <h1>p5-svelte</h1> -->
 		</div>
 
 		<P5 {sketch} debug />
@@ -89,19 +85,6 @@
 					<img src="/svelte-logo-horizontal.svg" alt="p5.js logo" width="200" />
 				</a>
 			</div>
-			<!-- <div class="my-1 text-white">
-				<label for="branches">Branch height:</label>
-				<input
-					type="range"
-					name="branches"
-					id="branches"
-					bind:value={branchHeight}
-					min="0"
-					max="200"
-					class="drop-shadow-sm"
-				/>
-				<span>{branchHeight}</span>
-			</div> -->
 			<div
 				class="w-[600px] text-center text-p5"
 				style="--range-handle-focus:#ed225d; --range-handle:#ed225daa; --range-handle-inactive:#ed225d;--range-slider:#fff1"
