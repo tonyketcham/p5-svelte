@@ -9,6 +9,7 @@
 	export let sketch: Sketch = undefined;
 	export let parentDivStyle: string = 'display: block;';
 	export let debug = false;
+	export let existingProject: p5 = undefined;
 
 	// Event generation
 	const event = createEventDispatcher();
@@ -58,18 +59,20 @@
 			console.log('available p5 native classes', nativeClasses);
 		}
 
-		project = new p5((instance: p5) => {
-			instance = augmentClasses(instance, nativeClasses);
+		project = existingProject
+			? existingProject
+			: new p5((instance: p5) => {
+					instance = augmentClasses(instance, nativeClasses);
 
-			if (debug) {
-				console.log('p5 instance', instance);
-			}
+					if (debug) {
+						console.log('p5 instance', instance);
+					}
 
-			// Set up a global object to capture this instance.
-			// @ts-ignore
-			window._p5Instance = instance;
-			return sketch(instance);
-		}, target);
+					// Set up a global object to capture this instance.
+					// @ts-ignore
+					window._p5Instance = instance;
+					return sketch(instance);
+			  }, target);
 
 		// Initial event dispatching
 		dispatch.ref();
