@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import P5 from '$lib/P5.svelte';
+	import type { Sketch } from '$lib';
 	import CodeBlock from '$components/CodeBlock.svelte';
 	import gettingStartedExample from '$helpers/gettingStartedExample';
 	import RangeSlider from 'svelte-range-slider-pips';
@@ -8,7 +9,7 @@
 	$: width = dimensions[0];
 	$: height = dimensions[1];
 
-	const sketch = (p5) => {
+	const sketch: Sketch = (p5) => {
 		p5.setup = () => {
 			p5.createCanvas(865, 400);
 		};
