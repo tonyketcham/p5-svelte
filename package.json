@@ -44,6 +44,7 @@
 		"eslint-plugin-svelte3": "^3.4.1",
 		"highlight.js": "^11.4.0",
 		"highlightjs-svelte": "^1.0.6",
+		"postcss": "^8.4.12",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.6.0",
 		"svelte": "^3.46.4",
