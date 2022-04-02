@@ -10,6 +10,9 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		prerender: {
+			default: true,
+		},
 		vite: {
 			optimizeDeps: {
 				include: ['highlight.js/lib/core'],

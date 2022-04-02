@@ -34,7 +34,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.29",
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "1.0.0-next.304",
 		"@typescript-eslint/eslint-plugin": "^4.33.0",
 		"@typescript-eslint/parser": "^4.33.0",
 		"@zerodevx/svelte-toast": "^0.6.3",
