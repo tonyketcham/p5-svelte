@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
 	import P5 from '$lib/P5.svelte';
+	import type { Sketch } from '$lib/types';
 	import RangeSlider from 'svelte-range-slider-pips';
 
 	let branchHeight = [150];
 
-	const sketch = (p5) => {
-		let theta;
+	const sketch: Sketch = (p5) => {
+		let theta: number;
 
 		p5.setup = () => {
 			p5.createCanvas(1200, 800);
@@ -31,7 +32,7 @@
 			branch(branchHeight[0]);
 		};
 
-		function branch(h) {
+		function branch(h: number) {
 			// Each branch will be 2/3rds the size of the previous one
 			h *= 0.66;
 
@@ -88,11 +89,11 @@
 				</a>
 			</div>
 			<div
-				class="w-[600px] text-center text-p5"
+				class="w-[600px]"
 				style="--range-handle-focus:#ed225d; --range-handle:#ed225daa; --range-handle-inactive:#ed225d;--range-slider:#fff1"
 			>
 				<RangeSlider bind:values={branchHeight} min={40} max={260} float />
-				<p>Branch height</p>
+				<p class="font-mono text-center text-p5">Branch height</p>
 			</div>
 		</div>
 	</section>

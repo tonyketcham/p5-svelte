@@ -48,11 +48,13 @@
 	const sketchFunct = eval(sketch);
 </script>
 
-<article class="flex flex-col space-y-3">
+<article class="doc">
 	<h2 class="text-4xl">↬ Follow</h2>
 	<p>
 		A segmented line follows the mouse. The relative angle from each segment to the next is
-		calculated with atan2() and the position of the next is calculated with sin() and cos().
+		calculated with <code>atan2()</code> and the position of the next is calculated with
+		<code>sin()</code>
+		and <code>cos()</code>.
 	</p>
 	<p>
 		Adapted from <a href="https://p5js.org/examples/interaction-follow-3.html" target="_blank"
@@ -63,7 +65,7 @@
 	<div class=" border border-p5/40 rounded-md overflow-hidden">
 		<P5 sketch={sketchFunct} />
 	</div>
-	<section class="pt-3">
+	<section>
 		<h3 class="text-2xl text-p5">Code</h3>
 		<CodeBlock isSketch code={sketch} />
 	</section>

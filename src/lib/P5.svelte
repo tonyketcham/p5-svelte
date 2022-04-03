@@ -1,12 +1,15 @@
-<script>
+<script lang="ts">
 	import { onMount, createEventDispatcher } from 'svelte';
+	import type p5 from 'p5';
+	import type { Sketch } from '$lib/types';
 
-	// API properties
-	export let project = undefined;
-	export let target = undefined;
-	export let sketch = undefined;
-	export let parentDivStyle = 'display: block;';
+	// Component props
+	export let target: HTMLElement = undefined;
+	export let sketch: Sketch = undefined;
+	export let parentDivStyle: string = 'display: block;';
 	export let debug = false;
+
+	let project: p5 = undefined;
 
 	// Event generation
 	const event = createEventDispatcher();
@@ -14,7 +17,7 @@
 		ref() {
 			event('ref', target);
 		},
-		init() {
+		instance() {
 			event('instance', project);
 		},
 	};
@@ -23,7 +26,7 @@
 	 * Creates a reference for the p5 instance to render within
 	 * @param {HTMLElement} node
 	 */
-	function ref(node) {
+	function ref(node: HTMLElement) {
 		target = node;
 		return {
 			destroy() {
@@ -32,7 +35,10 @@
 		};
 	}
 
-	function augmentClasses(instance, classes) {
+	function augmentClasses<NativeClasses extends [string, Record<string, any>][]>(
+		instance: p5,
+		classes: NativeClasses
+	) {
 		classes.forEach(([key, value]) => (instance[key] = value));
 		return instance;
 	}
@@ -53,11 +59,13 @@
 			console.log('available p5 native classes', nativeClasses);
 		}
 
-		project = new p5((instance) => {
+		project = new p5((instance: p5) => {
 			instance = augmentClasses(instance, nativeClasses);
+
 			if (debug) {
 				console.log('p5 instance', instance);
 			}
+
 			// Set up a global object to capture this instance.
 			// @ts-ignore
 			window._p5Instance = instance;
@@ -66,7 +74,7 @@
 
 		// Initial event dispatching
 		dispatch.ref();
-		dispatch.init();
+		dispatch.instance();
 	});
 </script>
 

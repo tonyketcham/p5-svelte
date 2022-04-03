@@ -1,15 +1,16 @@
 <script lang="ts">
 	import { HighlightAuto, HighlightSvelte } from 'svelte-highlight';
 	import blackMetalBathory from 'svelte-highlight/src/styles/synth-midnight-terminal-dark';
-	import { sketchExampleCode } from '../helpers/sketchExampleCode';
+	import { sketchExampleCode, type Language } from '../helpers/sketchExampleCode';
 	import { copyToClipboard } from '$helpers/clipboard';
 	import { toast } from '@zerodevx/svelte-toast';
 
 	export let code: string;
-	export let lang = 'svelte';
+	export let lang: Language = 'svelte';
 	export let isSketch = false;
 
 	let innerCode: HTMLElement;
+	$: isThisIshSvelte = ['svelte', 'svelte-ts'].includes(lang);
 
 	async function copy() {
 		const success = await copyToClipboard(innerCode.innerText);
@@ -27,8 +28,8 @@
 
 <div class="relative my-3 border border-p5/40 rounded-md overflow-hidden">
 	<div bind:this={innerCode}>
-		{#if lang === 'svelte'}
-			<HighlightSvelte code={isSketch ? sketchExampleCode(code) : code} />
+		{#if isThisIshSvelte}
+			<HighlightSvelte code={isSketch ? sketchExampleCode(code, lang) : code} />
 		{:else}
 			<HighlightAuto {code} />
 		{/if}
@@ -53,3 +54,9 @@
 		</svg>
 	</button>
 </div>
+
+<style>
+	:global(.hljs) {
+		@apply rounded-md border-0;
+	}
+</style>

@@ -19,10 +19,6 @@
 			title: '◎ 3D',
 			route: '/examples/3d',
 		},
-		// {
-		// 	title: 'Sound',
-		// 	route: '/examples/sound',
-		// },
 	];
 </script>
 
