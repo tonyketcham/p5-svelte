@@ -89,11 +89,11 @@
 				</a>
 			</div>
 			<div
-				class="w-[600px] text-center text-p5"
+				class="w-[600px]"
 				style="--range-handle-focus:#ed225d; --range-handle:#ed225daa; --range-handle-inactive:#ed225d;--range-slider:#fff1"
 			>
 				<RangeSlider bind:values={branchHeight} min={40} max={260} float />
-				<p>Branch height</p>
+				<p class="font-mono text-center text-p5">Branch height</p>
 			</div>
 		</div>
 	</section>

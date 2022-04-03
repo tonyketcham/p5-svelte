@@ -4,11 +4,12 @@
 	import type { Sketch } from '$lib/types';
 
 	// Component props
-	export let project: p5 = undefined;
 	export let target: HTMLElement = undefined;
 	export let sketch: Sketch = undefined;
 	export let parentDivStyle: string = 'display: block;';
 	export let debug = false;
+
+	let project: p5 = undefined;
 
 	// Event generation
 	const event = createEventDispatcher();
@@ -16,7 +17,7 @@
 		ref() {
 			event('ref', target);
 		},
-		init() {
+		instance() {
 			event('instance', project);
 		},
 	};
@@ -73,7 +74,7 @@
 
 		// Initial event dispatching
 		dispatch.ref();
-		dispatch.init();
+		dispatch.instance();
 	});
 </script>
 

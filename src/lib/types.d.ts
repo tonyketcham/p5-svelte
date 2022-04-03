@@ -6,3 +6,8 @@ import type p5 from 'p5';
  * Within the closure you can set optional `preload()`, `setup()`, and/or `draw()` properties on the given p5 instance.
  */
 export type Sketch = (sketch: p5) => void;
+
+/**
+ * A p5 instance, re-exported from `@types/p5`.
+ */
+export type p5 = p5;

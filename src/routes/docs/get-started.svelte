@@ -20,8 +20,8 @@
 	};
 </script>
 
-<article id="get-started" class="flex flex-col space-y-3 max-w-[90ch]">
-	<h2 class="text-4xl pb-2">⫸ Get Started</h2>
+<article id="get-started" class="doc">
+	<h2 class="text-4xl">⫸ Get Started</h2>
 	<p>
 		Trying to get <a href="https://p5js.org/">p5</a> up and running in
 		<a href="https://svelte.dev">Svelte</a> can be a pain. So here's an absolutely dead simple way of
@@ -34,8 +34,8 @@
 		just as you would with regular Svelte! You can even have multiple p5 components per page without
 		any scoping issues!
 	</p>
-	<section id="installation" class="pt-3">
-		<h3 class="text-xl mb-3">Installation</h3>
+	<section id="installation">
+		<h3>Installation</h3>
 		<CodeBlock code="pnpm i p5-svelte" />
 		<p>
 			Depending on your environment, you may be alerted upon installing <code>p5-svelte</code> that
@@ -45,10 +45,10 @@
 		<CodeBlock code="pnpm i -D p5" />
 		<p>
 			Then import the exported <code>P5</code> component from <code>p5-svelte</code> into your desired
-			component:
+			component.
 		</p>
-		<section class="pt-3">
-			<h3 class="text-2xl text-p5">Code</h3>
+		<section>
+			<h3>Example</h3>
 			<CodeBlock code={gettingStartedExample} />
 		</section>
 		<h3 class="text-xl">Output</h3>
@@ -74,12 +74,3 @@
 		</div>
 	</section>
 </article>
-
-<style>
-	p {
-		@apply mb-3 opacity-90;
-	}
-	code {
-		@apply bg-gray-700 py-0.5 px-1 rounded;
-	}
-</style>

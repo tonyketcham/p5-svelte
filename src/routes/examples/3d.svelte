@@ -39,7 +39,7 @@
 	const sketchFunct = eval(sketch);
 </script>
 
-<article class="flex flex-col space-y-3">
+<article class="doc">
 	<h2 class="text-4xl">◎ 3D: Orbit Control</h2>
 	<p>Click and drag on the canvas for orbit control; it allows you to move around the world.</p>
 	<p>
@@ -51,7 +51,7 @@
 	<div class="border border-p5/40 rounded-md overflow-hidden">
 		<P5 sketch={sketchFunct} />
 	</div>
-	<section class="pt-3">
+	<section>
 		<h3 class="text-2xl text-p5">Code</h3>
 		<CodeBlock isSketch code={sketch} />
 	</section>

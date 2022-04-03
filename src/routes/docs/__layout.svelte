@@ -7,6 +7,10 @@
 			title: '⫸ Get Started',
 			route: '/docs/get-started',
 		},
+		{
+			title: '↳ TypeScript',
+			route: '/docs/typescript',
+		},
 	];
 </script>
 

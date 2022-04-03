@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--scrollbar-track-color: rgb(14, 14, 14);
+	--scrollbar-thumb-color: rgb(237 34 93 / 0.8);
+}
+
 html {
 	background: black;
 }
@@ -9,6 +14,46 @@ body {
 	color: white;
 }
 
+article.doc {
+	@apply flex flex-col space-y-3 max-w-[90ch];
+}
+
+article > section,
+article > * > section {
+	@apply space-y-3 pt-3;
+}
+
 p > a {
-	@apply bg-p5/80 py-0.5 px-1 rounded;
+	@apply border-b-2 bg-gray-700 bg-opacity-40 border-p5/80 py-0.5 px-1 font-medium text-gray-50 tracking-wide hover:border-p5;
+	@apply transition-colors;
+}
+
+p {
+	@apply py-0.5 text-gray-300 font-sans text-lg font-light opacity-90;
+}
+code {
+	@apply bg-gray-700/60 py-0.5 px-1 rounded border border-gray-600/30;
+}
+h3 {
+	@apply text-2xl pt-7 font-semibold text-p5/80 leading-6;
+}
+
+/* Works on Firefox */
+* {
+	scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	@apply w-4;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--scrollbar-track-color);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--scrollbar-thumb-color);
+	border-radius: 20px;
+	border: 4px solid var(--scrollbar-track-color);
 }

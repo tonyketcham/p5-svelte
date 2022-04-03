@@ -34,7 +34,7 @@
 					class="bg-p5/20 px-4 py-2 rounded 
 				{$page.url.pathname.startsWith('/docs')
 						? 'outline outline-1'
-						: 'hover:bg-white/20 hover:text-white'}">⫸ Get started</a
+						: 'hover:bg-white/20 hover:text-white'}">⫸ Docs</a
 				>
 			</li>
 
