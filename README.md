@@ -107,7 +107,7 @@ The `<P5/>` component emits a few events you can listen to.
 
 Emits a reference to the DOM element target which the p5 instance mounts to.
 
-### `init`
+### `instance`
 
 This event fires on init of the p5 project instance, emitting a reference to that p5 project instance object.
 
