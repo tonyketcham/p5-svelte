@@ -24,8 +24,9 @@ article > * > section {
 }
 
 p > a {
-	@apply border-b-2 bg-gray-700 bg-opacity-40 border-p5/80 py-0.5 px-1 font-medium text-gray-50 tracking-wide hover:border-p5;
-	@apply transition-colors;
+	@apply border-b-2 bg-gray-700 bg-opacity-40 border-p5/80 py-0.5 px-1 font-medium text-gray-50 tracking-wide;
+	@apply hover:border-p5 hover:text-p5 focus:border-p5 focus:text-p5;
+	@apply motion-safe:transition-colors;
 }
 
 p {
