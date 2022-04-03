@@ -1,7 +1,9 @@
 <script lang="ts">
 	import CodeBlock from '$components/CodeBlock.svelte';
 
-	const tsImportExample = `import type { Sketch } from 'p5-svelte';`;
+	const library = 'p5-svelte';
+
+	const tsImportExample = `import type { Sketch } from ${library};`;
 
 	const p5Type = `// p5-svelte/types.d.ts
 import type p5 from 'p5';
@@ -30,10 +32,10 @@ export type Sketch = (sketch: p5) => void;`;
 	}`;
 
 	const jsIntellisenseSketch = `<script>
-	import P5 from 'p5-svelte';
+	import P5 from ${library};
 
 	/**
-	 * @type {import('p5-svelte').Sketch}
+	 * @type {import(${library}).Sketch}
 	 */
 	const sketch = (p5) => {
 		p5.setup = () => {

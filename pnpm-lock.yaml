@@ -6,7 +6,7 @@ specifiers:
   '@types/p5': ^1.4.2
   '@typescript-eslint/eslint-plugin': ^4.33.0
   '@typescript-eslint/parser': ^4.33.0
-  '@zerodevx/svelte-toast': ^0.6.3
+  '@zerodevx/svelte-toast': ^0.7.1
   autoprefixer: ^10.4.2
   eslint: ^8.10.0
   eslint-config-prettier: ^8.4.0
@@ -22,7 +22,7 @@ specifiers:
   svelte-highlight: ^5.2.2
   svelte-preprocess: ^4.10.4
   svelte-range-slider-pips: ^2.0.3
-  svelte2tsx: ^0.4.14
+  svelte2tsx: ^0.5.6
   tailwindcss: ^3.0.23
   tslib: ^2.3.1
   typescript: ^4.6.2
@@ -36,7 +36,7 @@ devDependencies:
   '@types/p5': 1.4.2
   '@typescript-eslint/eslint-plugin': 4.33.0_148f60167662f80a92e29e1aea31e7a2
   '@typescript-eslint/parser': 4.33.0_eslint@8.10.0+typescript@4.6.2
-  '@zerodevx/svelte-toast': 0.6.3
+  '@zerodevx/svelte-toast': 0.7.1
   autoprefixer: 10.4.2_postcss@8.4.12
   eslint: 8.10.0
   eslint-config-prettier: 8.4.0_eslint@8.10.0
@@ -51,7 +51,7 @@ devDependencies:
   svelte-highlight: 5.2.2
   svelte-preprocess: 4.10.4_d6d3472f638d32ef88915fa6412751db
   svelte-range-slider-pips: 2.0.3
-  svelte2tsx: 0.4.14_svelte@3.46.4+typescript@4.6.2
+  svelte2tsx: 0.5.6_svelte@3.46.4+typescript@4.6.2
   tailwindcss: 3.0.23_autoprefixer@10.4.2
   tslib: 2.3.1
   typescript: 4.6.2
@@ -319,8 +319,8 @@ packages:
       eslint-visitor-keys: 2.1.0
     dev: true
 
-  /@zerodevx/svelte-toast/0.6.3:
-    resolution: {integrity: sha512-k0W1JFoqHIcIQaP9ij99+Rv0ugaQSSNwOuNwwmTGRjWtIqrQr+ExLDE8LQGXLlJIprqDyMWB4lJkUql/r0RAtA==}
+  /@zerodevx/svelte-toast/0.7.1:
+    resolution: {integrity: sha512-JxyjPlpc3IzwyHLGbU5pDPW68HM1o7FjiSWmm9SIig7NuuBFIqoJkVt9CYr6toAXzi5sLBgu27hT1NntKbKcmA==}
     dev: true
 
   /acorn-jsx/5.3.2_acorn@8.7.0:
@@ -1807,8 +1807,8 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /svelte2tsx/0.4.14_svelte@3.46.4+typescript@4.6.2:
-    resolution: {integrity: sha512-udF0Z/DA98OfjPFBU1GBJRpYHEvsxA8ozwYVN08AOWMnQyxoSyWWlYspiq2m9xAjLo/pWnhec9z1d6jc9umqjA==}
+  /svelte2tsx/0.5.6_svelte@3.46.4+typescript@4.6.2:
+    resolution: {integrity: sha512-B4WZUtoTdVD+F73H1RQEH3Hrv7m2/ahThmAUkjT5CTWRigQaJqYQpSjisCH1Pzfi9B37YikDnAi4u4uxwYM+iw==}
     peerDependencies:
       svelte: ^3.24
       typescript: ^4.1.2
