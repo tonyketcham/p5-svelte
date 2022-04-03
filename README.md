@@ -1,7 +1,7 @@
 <br>
 
 <div align="center">
-<img src="https://github.com/tonyketcham/p5-svelte/raw/master/static/logo.svg" alt="p5-svelte logo" width="80" />
+<img src="https://github.com/tonyketcham/p5-svelte/raw/main/static/logo.svg" alt="p5-svelte logo" width="80" />
 </div>
 
 <h1 align="center">p5-Svelte</h1>
@@ -17,7 +17,11 @@ Trying to get <a href="https://p5js.org/">p5</a> up and running in [Svelte](http
 The API is super simple; you get a <code>P5</code> component which accepts a <code>sketch</code> prop. You can make use of Svelte's reactivity system to bind props or params within your p5 sketch just as you would with regular Svelte! You can even have multiple p5 components per page without any scoping issues!
 
 <p align="center">
-<a href="https://svelte.dev/repl/c5fd1d8347cd4e47afe0e519aedbb3a5?version=3.31.2" target="_blank">🌱 Simple Demo</a>
+	<a href="https://svelte.dev/repl/c5fd1d8347cd4e47afe0e519aedbb3a5?version=3.31.2" target="_blank">📘 Docs + Examples</a>
+</p>
+
+<p align="center">
+	<a href="https://svelte.dev/repl/c5fd1d8347cd4e47afe0e519aedbb3a5?version=3.31.2" target="_blank">🌱 Simple Demo</a>
 </p>
 
 ## Usage
@@ -70,13 +74,18 @@ Now add `p5-svelte` to your project (ex. `src/App.svelte`):
 
 ### Output:
 
-![using Svelte's reactivity system to bind parameters to a p5 sketch](https://dev-to-uploads.s3.amazonaws.com/i/ajyz894enhdgdvot441x.gif)
+<div align="center">
+	<img src="https://dev-to-uploads.s3.amazonaws.com/i/ajyz894enhdgdvot441x.gif" alt="using Svelte's reactivity system to bind parameters to a p5 sketch" />
+</div>
 
-<!-- <img align="right" src="https://dev-to-uploads.s3.amazonaws.com/i/ajyz894enhdgdvot441x.gif" alt="using Svelte's reactivity system to bind parameters to a p5 sketch" width="265" height="265" /> -->
+## Available Props
 
-**It's that easy! 😃**
-
-<br>
+| prop             | description                                                                                                                           | type          | default             | required? |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------- | --------- |
+| `sketch`         | Your p5 sketch in instance mode                                                                                                       | `Sketch`      | `undefined`         | yes       |
+| `target`         | An HTML element/node to mount the p5 canvas onto giving you full control of the parent wrapper that p5 renders a canvas as a child to | `HTMLElement` | `undefined`         | no        |
+| `parentDivStyle` | A p5 sketch instance -- you likely don't need this but this allows you to seed. Note: does nothing when paired with a `target`        | `string`      | `'display: block;'` | no        |
+| `debug`          | Logs everything about the p5 instance to the console for debugging purposes                                                           | `boolean`     | `false`             | no        |
 
 ## p5.js instance mode
 
@@ -101,3 +110,15 @@ Emits a reference to the DOM element target which the p5 instance mounts to.
 ### `init`
 
 This event fires on init of the p5 project instance, emitting a reference to that p5 project instance object.
+
+## TypeScript support + Intellisense
+
+`p5-svelte` exposes a `Sketch` type representing the p5 sketch in instance mode. This gives your editor prying eyes into p5's type system, supports autocomplete, and inline documentation of all the p5 goodies to make your life a little easier.
+
+### 😤 Before
+
+https://user-images.githubusercontent.com/43280336/161372626-32634e5b-37b1-4f56-b708-518200b1021f.mov
+
+### 🧙‍♀️ After
+
+https://user-images.githubusercontent.com/43280336/161373024-01c1a01d-b9ea-4ce4-8787-c42329a50ff6.mov
