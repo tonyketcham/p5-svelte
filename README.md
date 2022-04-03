@@ -17,7 +17,7 @@ Trying to get <a href="https://p5js.org/">p5</a> up and running in [Svelte](http
 The API is super simple; you get a <code>P5</code> component which accepts a <code>sketch</code> prop. You can make use of Svelte's reactivity system to bind props or params within your p5 sketch just as you would with regular Svelte! You can even have multiple p5 components per page without any scoping issues!
 
 <p align="center">
-	<a href="https://svelte.dev/repl/c5fd1d8347cd4e47afe0e519aedbb3a5?version=3.31.2" target="_blank">📘 Docs + Examples</a>
+	<a href="https://p5-svelte.netlify.app/" target="_blank">📘 Docs + Examples</a>
 </p>
 
 <p align="center">
