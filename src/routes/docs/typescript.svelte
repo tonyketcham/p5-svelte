@@ -26,7 +26,7 @@ export type Sketch = (sketch: p5) => void;`;
 	import P5 from 'p5-svelte';
 
 	/**
-	 * @type {import('package').Sketch}
+	 * @type {import('p5-svelte').Sketch}
 	 */
 	const sketch = (p5) => {
 		p5.setup = () => {
