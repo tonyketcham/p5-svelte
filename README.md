@@ -84,7 +84,7 @@ Now add `p5-svelte` to your project (ex. `src/App.svelte`):
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------- | --------- |
 | `sketch`         | Your p5 sketch in instance mode                                                                                                       | `Sketch`      | `undefined`         | yes       |
 | `target`         | An HTML element/node to mount the p5 canvas onto giving you full control of the parent wrapper that p5 renders a canvas as a child to | `HTMLElement` | `undefined`         | no        |
-| `parentDivStyle` | A p5 sketch instance -- you likely don't need this but this allows you to seed. Note: does nothing when paired with a `target`        | `string`      | `'display: block;'` | no        |
+| `parentDivStyle` | CSS Styling for the underlying `div` target contained in `<P5/>`. Note: this will do nothing when paired with a `target` prop         | `string`      | `'display: block;'` | no        |
 | `debug`          | Logs everything about the p5 instance to the console for debugging purposes                                                           | `boolean`     | `false`             | no        |
 
 ## p5.js instance mode
