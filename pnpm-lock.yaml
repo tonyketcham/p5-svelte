@@ -19,7 +19,7 @@ specifiers:
   prettier-plugin-svelte: ^2.6.0
   svelte: ^3.46.4
   svelte-check: ^2.4.5
-  svelte-highlight: ^5.2.2
+  svelte-highlight: ^6.0.1
   svelte-preprocess: ^4.10.4
   svelte-range-slider-pips: ^2.0.3
   svelte2tsx: ^0.5.6
@@ -48,7 +48,7 @@ devDependencies:
   prettier-plugin-svelte: 2.6.0_prettier@2.5.1+svelte@3.46.4
   svelte: 3.46.4
   svelte-check: 2.4.5_postcss@8.4.12+svelte@3.46.4
-  svelte-highlight: 5.2.2
+  svelte-highlight: 6.0.1
   svelte-preprocess: 4.10.4_d6d3472f638d32ef88915fa6412751db
   svelte-range-slider-pips: 2.0.3
   svelte2tsx: 0.5.6_svelte@3.46.4+typescript@4.6.2
@@ -1154,6 +1154,11 @@ packages:
     engines: {node: '>=12.0.0'}
     dev: true
 
+  /highlight.js/11.5.0:
+    resolution: {integrity: sha512-SM6WDj5/C+VfIY8pZ6yW6Xa0Fm1tniYVYWYW1Q/DcMnISZFrC3aQAZZZFAAZtybKNrGId3p/DNbFTtcTXXgYBw==}
+    engines: {node: '>=12.0.0'}
+    dev: true
+
   /highlightjs-svelte/1.0.6:
     resolution: {integrity: sha512-aXuBPz8df3sOXg90q8rRcBLyxIR8ozPU39a6tJ2rpJUjjd9brRIr55aC0IccW4gsPhQxZ+B3rFugdXsg9/ckDw==}
     dev: true
@@ -1732,10 +1737,10 @@ packages:
       - sugarss
     dev: true
 
-  /svelte-highlight/5.2.2:
-    resolution: {integrity: sha512-9Ww/IUg3hxEzKIMElE2HwhyPqzFXzCAWub8G9RFRkAv4Yd/ElnxtVcbS9z0aXXVEHXqe9fWKyVXIp+N8N5GRAA==}
+  /svelte-highlight/6.0.1:
+    resolution: {integrity: sha512-FOe0ePVoP59VO7e0cAXZ7OMooXEuC/lh0FK4Zr++3qRzNWm14a/ljICBTGZXqD+/l3mAIB5EzkVu3Nc/TZEyuA==}
     dependencies:
-      highlight.js: 11.4.0
+      highlight.js: 11.5.0
     dev: true
 
   /svelte-hmr/0.14.9_svelte@3.46.4:
