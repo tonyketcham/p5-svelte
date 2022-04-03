@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { HighlightAuto, HighlightSvelte } from 'svelte-highlight';
-	import blackMetalBathory from 'svelte-highlight/src/styles/synth-midnight-terminal-dark';
+	import blackMetalBathory from 'svelte-highlight/styles/synth-midnight-terminal-dark';
 	import { sketchExampleCode, type Language } from '../helpers/sketchExampleCode';
 	import { copyToClipboard } from '$helpers/clipboard';
 	import { toast } from '@zerodevx/svelte-toast';

@@ -6,7 +6,7 @@ specifiers:
   '@types/p5': ^1.4.2
   '@typescript-eslint/eslint-plugin': ^4.33.0
   '@typescript-eslint/parser': ^4.33.0
-  '@zerodevx/svelte-toast': ^0.6.3
+  '@zerodevx/svelte-toast': ^0.7.1
   autoprefixer: ^10.4.2
   eslint: ^8.10.0
   eslint-config-prettier: ^8.4.0
@@ -19,10 +19,10 @@ specifiers:
   prettier-plugin-svelte: ^2.6.0
   svelte: ^3.46.4
   svelte-check: ^2.4.5
-  svelte-highlight: ^5.2.2
+  svelte-highlight: ^6.0.1
   svelte-preprocess: ^4.10.4
   svelte-range-slider-pips: ^2.0.3
-  svelte2tsx: ^0.4.14
+  svelte2tsx: ^0.5.6
   tailwindcss: ^3.0.23
   tslib: ^2.3.1
   typescript: ^4.6.2
@@ -36,7 +36,7 @@ devDependencies:
   '@types/p5': 1.4.2
   '@typescript-eslint/eslint-plugin': 4.33.0_148f60167662f80a92e29e1aea31e7a2
   '@typescript-eslint/parser': 4.33.0_eslint@8.10.0+typescript@4.6.2
-  '@zerodevx/svelte-toast': 0.6.3
+  '@zerodevx/svelte-toast': 0.7.1
   autoprefixer: 10.4.2_postcss@8.4.12
   eslint: 8.10.0
   eslint-config-prettier: 8.4.0_eslint@8.10.0
@@ -48,10 +48,10 @@ devDependencies:
   prettier-plugin-svelte: 2.6.0_prettier@2.5.1+svelte@3.46.4
   svelte: 3.46.4
   svelte-check: 2.4.5_postcss@8.4.12+svelte@3.46.4
-  svelte-highlight: 5.2.2
+  svelte-highlight: 6.0.1
   svelte-preprocess: 4.10.4_d6d3472f638d32ef88915fa6412751db
   svelte-range-slider-pips: 2.0.3
-  svelte2tsx: 0.4.14_svelte@3.46.4+typescript@4.6.2
+  svelte2tsx: 0.5.6_svelte@3.46.4+typescript@4.6.2
   tailwindcss: 3.0.23_autoprefixer@10.4.2
   tslib: 2.3.1
   typescript: 4.6.2
@@ -319,8 +319,8 @@ packages:
       eslint-visitor-keys: 2.1.0
     dev: true
 
-  /@zerodevx/svelte-toast/0.6.3:
-    resolution: {integrity: sha512-k0W1JFoqHIcIQaP9ij99+Rv0ugaQSSNwOuNwwmTGRjWtIqrQr+ExLDE8LQGXLlJIprqDyMWB4lJkUql/r0RAtA==}
+  /@zerodevx/svelte-toast/0.7.1:
+    resolution: {integrity: sha512-JxyjPlpc3IzwyHLGbU5pDPW68HM1o7FjiSWmm9SIig7NuuBFIqoJkVt9CYr6toAXzi5sLBgu27hT1NntKbKcmA==}
     dev: true
 
   /acorn-jsx/5.3.2_acorn@8.7.0:
@@ -1154,6 +1154,11 @@ packages:
     engines: {node: '>=12.0.0'}
     dev: true
 
+  /highlight.js/11.5.0:
+    resolution: {integrity: sha512-SM6WDj5/C+VfIY8pZ6yW6Xa0Fm1tniYVYWYW1Q/DcMnISZFrC3aQAZZZFAAZtybKNrGId3p/DNbFTtcTXXgYBw==}
+    engines: {node: '>=12.0.0'}
+    dev: true
+
   /highlightjs-svelte/1.0.6:
     resolution: {integrity: sha512-aXuBPz8df3sOXg90q8rRcBLyxIR8ozPU39a6tJ2rpJUjjd9brRIr55aC0IccW4gsPhQxZ+B3rFugdXsg9/ckDw==}
     dev: true
@@ -1732,10 +1737,10 @@ packages:
       - sugarss
     dev: true
 
-  /svelte-highlight/5.2.2:
-    resolution: {integrity: sha512-9Ww/IUg3hxEzKIMElE2HwhyPqzFXzCAWub8G9RFRkAv4Yd/ElnxtVcbS9z0aXXVEHXqe9fWKyVXIp+N8N5GRAA==}
+  /svelte-highlight/6.0.1:
+    resolution: {integrity: sha512-FOe0ePVoP59VO7e0cAXZ7OMooXEuC/lh0FK4Zr++3qRzNWm14a/ljICBTGZXqD+/l3mAIB5EzkVu3Nc/TZEyuA==}
     dependencies:
-      highlight.js: 11.4.0
+      highlight.js: 11.5.0
     dev: true
 
   /svelte-hmr/0.14.9_svelte@3.46.4:
@@ -1807,8 +1812,8 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /svelte2tsx/0.4.14_svelte@3.46.4+typescript@4.6.2:
-    resolution: {integrity: sha512-udF0Z/DA98OfjPFBU1GBJRpYHEvsxA8ozwYVN08AOWMnQyxoSyWWlYspiq2m9xAjLo/pWnhec9z1d6jc9umqjA==}
+  /svelte2tsx/0.5.6_svelte@3.46.4+typescript@4.6.2:
+    resolution: {integrity: sha512-B4WZUtoTdVD+F73H1RQEH3Hrv7m2/ahThmAUkjT5CTWRigQaJqYQpSjisCH1Pzfi9B37YikDnAi4u4uxwYM+iw==}
     peerDependencies:
       svelte: ^3.24
       typescript: ^4.1.2
