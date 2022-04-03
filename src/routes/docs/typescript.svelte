@@ -3,8 +3,15 @@
 
 	const tsImportExample = `import type { Sketch } from 'p5-svelte';`;
 
-	const sketchType = `// p5-svelte/types.d.ts
+	const p5Type = `// p5-svelte/types.d.ts
 import type p5 from 'p5';
+
+/**
+ * A p5 instance, re-exported from \`@types/p5\`.
+ */
+export type p5 = p5;`;
+
+	const sketchType = `// p5-svelte/types.d.ts
 
 /**
  * A closure representing a p5 sketch in [Instance Mode](https://github.com/processing/p5.js/wiki/Global-and-instance-mode).
@@ -56,8 +63,19 @@ export type Sketch = (sketch: p5) => void;`;
 		<CodeBlock code={tsExampleSketch} isSketch lang="svelte-ts" />
 	</section>
 
-	<section id="sketch-type-def">
-		<h3>Sketch Type Definition</h3>
+	<section id="exposed-types">
+		<h3>Exposed Types</h3>
+
+		<h4 id="exposed-types-p5"><code>p5</code></h4>
+		<p>
+			We directly re-export the <code>p5</code> type so that you can use it in more advanced,
+			modular use-cases allowing direct access to the p5 instance type without needing to explicitly
+			install
+			<code>@types/p5</code>. This enables a single source of entry to p5.js.
+		</p>
+		<CodeBlock code={p5Type} lang="ts" />
+
+		<h4 id="exposed-types-sketch"><code>Sketch</code></h4>
 		<p>
 			For reference, here is the typedef under the hood - it's admittedly a simple passthrough to
 			the p5 type defs:

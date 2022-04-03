@@ -33,10 +33,13 @@ p {
 	@apply py-0.5 text-gray-300 font-sans text-lg font-light opacity-90;
 }
 code {
-	@apply bg-gray-700/60 py-0.5 px-1 rounded border border-gray-600/30;
+	@apply bg-gray-700/60 py-0.5 px-1 rounded border border-gray-600/30 text-white;
 }
 h3 {
 	@apply text-2xl pt-7 font-semibold text-p5/80 leading-6;
+}
+h4 {
+	@apply text-xl pt-3 font-semibold text-p5/80 leading-6;
 }
 
 /* Works on Firefox */
