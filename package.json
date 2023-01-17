@@ -40,7 +40,7 @@
 		"@sveltejs/kit": "1.0.0-next.304",
 		"@types/p5": "^1.4.2",
 		"@typescript-eslint/eslint-plugin": "^4.33.0",
-		"@typescript-eslint/parser": "^4.33.0",
+		"@typescript-eslint/parser": "^5.48.2",
 		"@zerodevx/svelte-toast": "^0.7.1",
 		"autoprefixer": "^10.4.2",
 		"eslint": "^8.10.0",
