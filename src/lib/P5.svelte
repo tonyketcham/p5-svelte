@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, createEventDispatcher } from 'svelte';
+	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import type p5 from 'p5';
 	import type { Sketch } from '$lib/types';
 
@@ -76,6 +76,16 @@
 		dispatch.ref();
 		dispatch.instance();
 	});
+
+	/**
+	 * Bind the lifecycle of the p5 instance with the component
+	*/
+	onDestroy(() => {
+		if (project) {
+			project.remove()
+			project = undefined
+		}
+	})
 </script>
 
 <div use:ref style={parentDivStyle} class="m-0" />
