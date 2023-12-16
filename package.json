@@ -66,5 +66,10 @@
 		"@types/p5": "^1.4.2"
 	},
 	"type": "module",
-	"svelte": "index.js"
+	"svelte": "index.js",
+	"exports": {
+		".": {
+			"svelte": "./index.js"
+		}
+	}
 }
